@@ -1,17 +1,21 @@
 //History Trials
+/*
+
 import createHistory from 'history/createBrowserHistory'
 const myHistory = createHistory()
-const location = myHistory.location
+//const location = myHistory.location
 
-myHistory.listen(function(loc){
+myHistory.listen((loc, action)=>{
 
-  console.log(location);
+  console.log("loc");
+  console.log(loc);
+  console.log(action);
   //console.log(loc.action);
   //console.log(loc.state);
 
-  if (loc.action === 'POP') {
-        console.log("Pop");
-        return;
+  if (action === 'POP') {
+        //return;
+        window.scrollTo(0, 0);
     }
   else if (loc.state && loc.state.scroll !== undefined && !loc.state.scroll) {
       console.log("no scrolls");
@@ -22,6 +26,8 @@ myHistory.listen(function(loc){
     window.scrollTo(0, 0);
   }
 
-});
+})
 
 export default myHistory
+
+*/

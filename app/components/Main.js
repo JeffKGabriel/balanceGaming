@@ -11,7 +11,7 @@ import myHistory from './myHistory.js'
 
 const Main = React.createClass({
 
-  mixins: [myHistory],
+  //mixins: [myHistory],
 
   render: function(){
     return(

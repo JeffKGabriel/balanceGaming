@@ -85,6 +85,4 @@ var Header = (props) =>{
     )
 }
 
-
-module.exports = Header;
-//export default Header
+export default Header

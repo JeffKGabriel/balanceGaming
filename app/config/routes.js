@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, hashHistory, browserHistory, IndexRoute } from 'react-router'
+import {applyRouterMiddleware, Router, Route, hashHistory, browserHistory, IndexRoute } from 'react-router'
 
 import Main from '../components/Main.js'
 import Home from '../components/Home.js'
@@ -12,10 +12,15 @@ import Partners from '../components/Partners.js'
 import About from '../components/About.js'
 import PlayerProfile from '../components/Rosters/PlayerProfile.js'
 
+import { useScroll } from 'react-router-scroll';
+
+
 // onUpdate={() => window.scrollTo(0, 0)}
 
 const routes = (
-  <Router history={hashHistory}>
+  <Router history={hashHistory}
+  render={applyRouterMiddleware(useScroll())}
+  >
 
     <Route path='/' component={Main}>
 

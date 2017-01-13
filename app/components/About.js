@@ -7,6 +7,21 @@ import { bindActionCreators } from 'redux'
 
 const About = React.createClass({
 
+  getInitialState: function() {
+    return {
+      newsList : []
+    }
+  },
+
+  componentWillMount: function () {
+  },
+
+  componentDidMount: function () {
+  },
+
+  componentDidUpdate() {
+  },
+
   render: function(){
 
     return(
@@ -43,5 +58,6 @@ function mapDispatchToProps(dispatch) {
 
 //export default Footer
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(About)

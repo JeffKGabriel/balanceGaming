@@ -25,37 +25,16 @@ const News = React.createClass({
     }
   },
 
-
   componentWillMount: function () {
-    /*
-    mongoHelper.getNewsArticles()
-      .then(function (response) {
-
-        response.data.map( m => {
-          this.setState({
-            newsList: [ m , ...this.state.newsList]
-          })
-        });
-
-      }.bind(this));
-      */
-
-
   },
 
-
   componentDidMount: function () {
-    //console.log("componentDidMount");
-    //console.log(this.props.location.query.i);
   },
 
   componentDidUpdate() {
-    //window.scrollTo(0,0);
   },
 
   render: function(){
-    //window.scrollTo(0,0);
-    //console.log(this.props);
 
 
 

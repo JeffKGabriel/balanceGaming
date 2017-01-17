@@ -14,25 +14,29 @@ const HomeRosterBox = React.createClass({
       age:17,
       name: "Sumail",
       country:"Pakistan",
-      pic: require('../imgs/sumailRoster.jpg')
+      pic: require('../imgs/sumailRoster.jpg') ,
+      id:3 ,
     }
     var rosterInfoArteezy={
       age:24,
       name: "Arteezy",
       country:"Canada",
-      pic: require('../imgs/arteezyRoster.png')
+      pic: require('../imgs/arteezyRoster.png'),
+      id:2 ,
     }
     var rosterInfoFlash={
       age:26,
       name: "Flash",
       country:"South Korea",
-      pic: require('../imgs/flashRoster.jpg')
+      pic: require('../imgs/flashRoster.jpg'),
+      id:6 ,
     }
     var rosterInfoIsai={
       age:31,
       name: "Isai",
       country:"USA",
-      pic: require('../imgs/isaiRoster.png')
+      pic: require('../imgs/isaiRoster.png'),
+      id:4 ,
     }
 
 
@@ -71,6 +75,7 @@ const HomeRosterBox = React.createClass({
         >
         </div>
       </div>
+
       <div className="col-sm-10 rosterPanelBox">
 
         <HomeRosterPanel info={rosterInfoSumail} />

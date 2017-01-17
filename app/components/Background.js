@@ -15,12 +15,8 @@ const Background = (props) => (
           }}
         >
         </div>
-        <div className="col-sm-12 homeBackgroundAfter"> </div>
-        <div className="col-sm-12"
-        style={{
-          marginTop:160,
-        }}
-        ></div>
+        <div className="col-sm-12 homeBackgroundAfter">
+        </div>
       </div>
 )
 

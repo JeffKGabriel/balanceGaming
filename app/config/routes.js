@@ -11,15 +11,39 @@ import MediaIndex from '../components/media/MediaIndex.js'
 import Partners from '../components/Partners.js'
 import About from '../components/About.js'
 import PlayerProfile from '../components/Rosters/PlayerProfile.js'
+import Team from '../components/Rosters/Team.js'
+
 
 import { useScroll } from 'react-router-scroll';
 
 
 // onUpdate={() => window.scrollTo(0, 0)}
+/*
+const shouldUpdateScroll = (prevRouterProps, {routes}) => {
+
+  console.log(prevRouterProps);
+  //console.log(location);
+  return true;
+  //prevRouterProps && location.pathname !== prevRouterProps.location.pathname
+}
+*/
 
 const routes = (
   <Router history={hashHistory}
-  render={applyRouterMiddleware(useScroll())}
+  render={applyRouterMiddleware(useScroll(
+
+    (prevRouterProps, {location},) => {
+
+      if(location.action === "POP"){
+        return true;
+      }
+      else if(location.state.scrollToTop === true){
+        return[0,0];
+      }
+      return true;
+    }
+
+   ))}
   >
 
     <Route path='/' component={Main}>
@@ -29,6 +53,7 @@ const routes = (
       <Route path='/newsPage' component={NewsPage} />
       <Route path='/login' component={Login} />
       <Route path='/Rosters' component={AllTeams} />
+      <Route path='/Team' component={Team} />
       <Route path='/Media' component={MediaIndex} />
       <Route path='/Partners' component={Partners} />
       <Route path='/About' component={About} />

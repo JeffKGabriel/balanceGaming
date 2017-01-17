@@ -1,16 +1,64 @@
 html{
   position: relative;
-  min-height: 100%;
 }
+
+body{
+  height:100%;
+  min-width:600px;
+}
+
 
 .beforeFooter{
   height: 300px;
 }
 .footer{
-  height: 200;
-  background-color: #F00;
+  height: 90;
+  background-color: #4D4D4D;
   position: absolute;
   bottom: 0;
+  font-size: 16px;
+  color: #777;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+
+}
+
+.footerLeftLinks{
+  height:90;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footerLeftLinks div{
+  margin-right: 16px;
+  cursor: pointer;
+}
+.footerLeftLinks div:hover{
+  color: #b5e5f9;
+}
+
+.footerRightLinks{
+  height:90;
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+}
+.footerRightLinks div{
+  cursor: pointer;
+}
+
+.footerIcon{
+  font-size: 28;
+  margin-left: 24px;
+}
+
+.footerIcon:hover{
+  color: #b5e5f9;
+}
+
+.tradeMark{
+  font-size: 16px;
+  margin-left: 30px;
 }
 
 .siteHeader{
@@ -34,7 +82,7 @@ html{
 }
 
 .headerMenu{
-  width:450px;
+  max-width:450px;
   float:right;
 }
 
@@ -57,6 +105,22 @@ html{
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+.homeBanner{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    opacity : 0.7,;
+}
+
+.homeBannerDown{
+  width:100%;
+  font-size: 48px;
+  margin-top: 70vh;
+  text-align: center;
 }
 
 
@@ -121,24 +185,41 @@ html{
 
 .homeRosterPanel{
   min-width:200;
-  height:400;
+  height:430;
   margin-left: 16px;
 }
 
 .homeRosterPlayerPic{
   min-width:200;
   height:300;
-  box-shadow: 0 16px 16px rgba(0,0,0,.16);
+  box-shadow: 0 8px 8px rgba(0,0,0,.12);
   transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
   cursor:pointer;
   opacity: 0.8;
   }
 
 .homeRosterPlayerPic:hover{
-  box-shadow: 0 20px 20px rgba(0,0,0,.24);
+  box-shadow: 0 16px 16px rgba(0,0,0,.20);
   transform: translateY(-3px);
   opacity: 1;
 
+}
+
+.playerSocial{
+  height:40px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.playerSocialIcon{
+  height:32;
+  width:32;
+  font-size: 24;
+  text-align: center;
+  color: #777;
+  margin: 4px;
+  cursor: pointer;
 }
 
 .homeRosterPlayerInfo{
@@ -177,6 +258,7 @@ html{
 }
 
 .homeRosterPlayerAge{
+  margin-top: 2px;
   font-size: 16;
   color: #777;
 }
@@ -214,6 +296,58 @@ border-right: 1px solid #CCC;
 }
 */
 
+.rosterGalleryBox{
+  margin-top: 220px;
+  display: flex;
+  justify-content: center;
+}
+
+  .rosterGallery {
+    box-shadow: 0 12px 12px rgba(0,0,0,.12);
+    height:500;
+    z-index: 5;
+    cursor: pointer;
+    margin-bottom: 60px;
+    display: inline-block;
+}
+
+  .rosterGallery ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .rosterGallery ul li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    overflow: hidden;
+
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+  }
+
+  .rosterGallery ul li img {
+    margin: 0;
+    padding: 0;
+    margin-left: -45px;
+    transition: all .5s ease;
+  }
+
+  .rosterGallery ul:hover li {
+    width: 180px;
+  }
+  .rosterGallery ul:hover li:hover {
+    width: 300px;
+  }
+  .rosterGallery ul:hover li:hover img{
+    margin-left: 0px;
+  }
+
+
 
 .newsTitleBox{
   border-right: 1px solid #CCC;
@@ -233,11 +367,18 @@ border-right: 1px solid #CCC;
 }
 
 .newsArticleBox{
-  font-size: 22;
+  font-size:19;
   min-height: 200;
   font-family: 'Roboto Slab', serif;
   padding-top: 20px;
   padding-left: 30px;
+}
+
+.contentPage{
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
 }
 
 
@@ -255,8 +396,49 @@ border-right: 1px solid #CCC;
   box-shadow: 0 6px 6px rgba(0,0,0,.04);
 }
 
-.newsPage{
-  margin-top: 100;
+.newsPageTitle{
+  font-family: 'Roboto Slab', serif;
+  font-size: 56;
+  display: inline-block;
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 14px;
+  margin-bottom: 30px;
+}
+
+.newsPageDate{
+  text-align: right;
+  font-size: 24;
+}
+
+.newsPageArticle{
+  font-family: 'Roboto Slab', serif;
+  font-size: 18;
+  margin-top: 20;
+}
+
+.shareNews{
+  font-family: 'Roboto Slab', serif;
+  font-size: 32;
+  color: #CCC;
+}
+
+.shareButton{
+  width: 32;
+  height: 32;
+  float: left;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.homeBackground{
+  overflow: hidden;
+  z-index: -1;
 }
 
 
@@ -382,6 +564,156 @@ border-right: 1px solid #CCC;
 
 
 
+.profilePic{
+  box-shadow: 0 16px 16px rgba(0,0,0,.16);
+  padding: 0;
+}
+
+.profileImg{
+  width:100%;
+}
+.profileTitle{
+  text-align: center;
+  height:60px;
+  font-size: 36;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+.profileInfo{
+  text-align: center;
+  height:50px;
+  font-size: 22;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+}
+
+.profileBio{
+  font-family: 'Roboto Slab', serif;
+  font-size: 18;
+  margin-top: 8;
+}
+
+
+.newsLetterForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto Slab', serif;
+}
+
+.newsLetterForm p{
+  font-size: 28;
+  color: #555;
+}
+
+.partnersBox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mediaGallery{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.sliderContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height:490;
+}
+
+.sliderContent span{
+  box-shadow: 0 10px 10px rgba(0,0,0,.12);
+  background-color: black;
+}
+
+
+
+.slick-next:before, .slick-prev:before {
+  color: #777;
+}
+
+.galleryBox{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+
+.partnersHomePanel{
+  cursor:pointer;
+}
+
+.partnerBox{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.partnerPanel{
+  margin-top: 80;
+}
+
+.partnerPic{
+  display: flex;
+  padding:0;
+  cursor:pointer;
+}
+.partnerPic img{
+  align-self: center;
+}
+
+
+.partnerBio{
+  font-family: 'Roboto Slab', serif;
+  font-size: 16;
+  margin-bottom: 40;
+  padding-left: 26;
+  padding-right: 26;
+}
+
+.partnerBoxShadow{
+  box-shadow: 0 10px 10px rgba(0,0,0,.12);
+  display: inline-block;
+  background-color: #FFF;
+}
+
+.partnerLinkIcon{
+  height:40px;
+  width:40px;
+  float: left;
+  cursor: pointer;
+  text-align: center;
+}
+
+.partnerLinkIcon:hover{
+  color: red;
+}
+
+.partnerLinks{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+.input-group-addon {
+    min-width:100px;// if you want width please write here //
+    text-align:center;;
+}
+
+
+
+
 
 .myAppear-enter{
   transition-duration: .5s;
@@ -416,3 +748,8 @@ border-right: 1px solid #CCC;
 .homeBoxAnimation-enter-active {
   transform: translate(0%);
 }
+
+
+
+
+/* css loader */

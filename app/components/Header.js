@@ -15,6 +15,9 @@ var Header = (props) =>{
       case "Rosters":
         sliderOffset = 142;
         break;
+      case "Team":
+        sliderOffset = 142;
+        break;
       case "PlayerProfile":
         sliderOffset = 142;
         break;
@@ -30,13 +33,18 @@ var Header = (props) =>{
     }
 
     return(
-      <div className="col-sm-12 animated fadeInDown siteHeader">
+      <div className="col-xs-12 animated fadeInDown siteHeader">
 
-        <div className="col-sm-offset-2 col-sm-8 row">
+        <div className="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12 row">
 
-          <div className="col-sm-2">
-            <Link to='/Home'>
-              <img src={require('../imgs/ColorQuad.png')} style={{ height:64 , paddingTop:10}} />
+          <div className="col-xs-2"
+          style={{
+            opacity: 0.8,
+            padding:0,
+          }}
+          >
+            <Link to={{ pathname:'/Home', state: { scrollToTop: true } }}>
+              <img src={require('../imgs/Balance_Logo_B_grad.png')} style={{ height:72 , paddingTop:6}} />
             </Link>
           </div>
 
@@ -44,27 +52,27 @@ var Header = (props) =>{
 
             <ul className="MenuUL">
 
-              <Link to='/Home'>
+              <Link to={{ pathname:'/Home', state: { scrollToTop: true } }}>
                 <li>Home</li>
               </Link>
 
-              <Link to='/News'>
+              <Link to={{ pathname:'/News', state: { scrollToTop: true } }}>
                 <li>News</li>
               </Link>
 
-              <Link to='/Rosters'>
+              <Link to={{ pathname:'/Rosters', state: { scrollToTop: true } }}>
                 <li>Rosters</li>
               </Link>
 
-              <Link to='/Media'>
+              <Link to={{ pathname:'/Media', state: { scrollToTop: true } }}>
                 <li>Media</li>
               </Link>
 
-              <Link to='/Partners'>
+              <Link to={{ pathname:'/Partners', state: { scrollToTop: true } }}>
                 <li>Partners</li>
               </Link>
 
-              <Link to='/About'>
+              <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
                 <li>About</li>
               </Link>
 

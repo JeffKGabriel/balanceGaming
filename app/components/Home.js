@@ -9,6 +9,9 @@ import myHistory from './myHistory.js'
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
+import Footer from './Footer.js'
+import Background from './Background.js'
+
 
 
 const Home = React.createClass({
@@ -18,49 +21,15 @@ const Home = React.createClass({
   render: function(){
 
     return(
-      <div className="wrapper">
-        <div
-          className="col-sm-12 homeBackground"
-          style={{
-            height:1300,
-            //background : 'url(' + 'https://images.unsplash.com/photo-1474518665815-99456f56c531?dpr=2&auto=format&fit=crop&w=1500&h=844' + ') no-repeat center center',
-            background : 'url(' + 'https://cdn.wallpaperdirect.com/shared-assets/images/products/120170orig.jpg' + ') repeat ',
-            backgroundSize : '',
-            backgroundColor : "#FFF",
-            opacity:0.2,
-            position: 'absolute',
-          }}
-        >
-        </div>
+      <div className="contentPage">
+        <Background />
 
-        <div className="col-sm-12 homeBackgroundAfter"> </div>
+        <div className="homeBanner">
 
-        <div
-          className="col-sm-offset-3 col-sm-6"
-          style={{
-            height:200,
-            zIndex: 1,
-            marginTop:240,
-            marginBottom: 80,
-            opacity : 0.7,
-          }}
-        >
-          <img className="img-responsive" src={require('../imgs/logoBlackBig.png')}
-            style={{
-              height:160,
-              margin: "0 auto",
-            }}
-          />
-        </div>
+          <div className="homeBannerDown">
+            <i className="fa fa-chevron-down" aria-hidden="true"></i>
+          </div>
 
-        <div
-          className="col-sm-offset-1 col-sm-10"
-          style={{
-            marginTop: 0,
-            display : 'flex',
-            justifyContent : 'center',
-          }}
-        >
         </div>
 
 
@@ -121,7 +90,8 @@ const Home = React.createClass({
           className="col-sm-offset-1 col-sm-10 homeRoster"
           style={{
             //backgroundColor: '#555555',
-            marginTop: 100,
+            marginTop: 180,
+            marginBottom:80,
           }}
         >
           <div
@@ -157,9 +127,49 @@ const Home = React.createClass({
             }}
           >
             <div style={{
-              backgroundColor: '#0F0',
               height:400,
             }}>
+
+              <div className="partnersBox">
+
+                <div className="partnersHomePanel" style={{
+                  height:200,
+                  width:200,
+                  backgroundColor: '#424',
+                }}>
+                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+                </div>
+                <div className="partnersHomePanel" style={{
+                  height:200,
+                  width:200,
+                  backgroundColor: '#f24',
+                }}>
+                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+                </div>
+                <div className="partnersHomePanel" style={{
+                  height:200,
+                  width:200,
+                  backgroundColor: '#238',
+                }}>
+                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+                </div>
+                <div className="partnersHomePanel" style={{
+                  height:200,
+                  width:200,
+                  backgroundColor: '#a42',
+                }}>
+                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+                </div>
+                <div className="partnersHomePanel" style={{
+                  height:200,
+                  width:200,
+                  backgroundColor: '#32b',
+                }}>
+                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+                </div>
+
+              </div>
+
             </div>
 
           </div>
@@ -182,16 +192,50 @@ const Home = React.createClass({
             }}
           >
             <div style={{
-              backgroundColor: '#0F0',
               height:400,
             }}>
+
+
+
+            <div className="col-sm-offset-1 col-sm-10 newsLetterForm">
+
+              <p>Stay Up to Date w/ Balance</p>
+
+              <div className="input-group input-group-lg"
+                style={{
+                  marginTop:14,
+                }}
+              >
+                <span className="input-group-addon" id="sizing-addon1">Name</span>
+                <input type="text" className="form-control" placeholder="Name" aria-describedby="sizing-addon1" />
+              </div>
+                <div className="input-group input-group-lg"
+                  style={{
+                    marginTop:8,
+                  }}
+                >
+                  <span className="input-group-addon" id="sizing-addon2">Email</span>
+                  <input type="text" className="form-control" placeholder="Home@Mail.com" aria-describedby="sizing-addon2" />
+              </div>
+              <button type="button" className="btn btn-default btn-lg"
+                style={{
+                  marginTop:14,
+                }}
+              >
+                Submit
+              </button>
+            </div>
+
+
+
+
             </div>
 
           </div>
         </div>
 
         <div className="col-sm-12 beforeFooter"></div>
-
+        <Footer />
 
       </div> //end of Home
 

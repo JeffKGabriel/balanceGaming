@@ -4,12 +4,13 @@ import { createStore, combineReducers, applyMiddleware} from 'redux'
 import thunk from 'redux-thunk';
 import { Provider, connect } from 'react-redux'
 import { Router, Route, hashHistory, IndexRoute, browserHistory } from 'react-router'
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+import { syncHistoryWithStore, routerReducer, routerMiddleware } from 'react-router-redux'
 
 import routes from './config/routes.js'
 
 import newsReducer from './reducers/news.js'
 import rosterReducer from './reducers/rosterReducer.js'
+
 
 
 // Store
@@ -19,8 +20,13 @@ const store = createStore(
     newsReducer,
     routing: routerReducer
   }),
-  applyMiddleware(thunk)
+  applyMiddleware(
+    thunk,
+    routerMiddleware(hashHistory)
+  )
 )
+
+
 
 
 fetch('http://104.131.167.44:8888/api/news', {

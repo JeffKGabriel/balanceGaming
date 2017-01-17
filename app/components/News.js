@@ -11,9 +11,22 @@ import { bindActionCreators } from 'redux'
 //var HomeHeader = require('./HomeHeader');
 import HomeHeader from './HomeHeader.js'
 
+import Background from './Background.js'
+
+
 
 //var NewsPage = require('./NewsPage');
 import NewsPage from './NewsPage.js'
+
+import Footer from './Footer.js'
+
+import {
+  ShareButtons,
+  ShareCounts,
+  generateShareIcon
+} from 'react-share';
+
+
 
 
 const News = React.createClass({
@@ -38,6 +51,7 @@ const News = React.createClass({
 
 
 
+
     //const articles = this.state.newsList.map((a,k) =>{
       const articles = this.props.news.map((a,k) =>{
         return(
@@ -53,21 +67,8 @@ const News = React.createClass({
       });
 
     return(
-      <div>
-        <div
-          className="col-sm-12 homeBackground"
-          style={{
-            height:1300,
-            //background : 'url(' + 'https://images.unsplash.com/photo-1474518665815-99456f56c531?dpr=2&auto=format&fit=crop&w=1500&h=844' + ') no-repeat center center',
-            background : 'url(' + 'https://cdn.wallpaperdirect.com/shared-assets/images/products/120170orig.jpg' + ') repeat ',
-            backgroundSize : '',
-            backgroundColor : "#FFF",
-            opacity:0.1,
-            position: 'absolute',
-          }}
-        >
-        </div>
-        <div className="col-sm-12 homeBackgroundAfter"> </div>
+      <div className="contentPage">
+        <Background />
 
       <div
         className="col-sm-10 col-sm-offset-1"
@@ -85,6 +86,7 @@ const News = React.createClass({
           {articles}
       </div>
       <div className="col-sm-12 beforeFooter"></div>
+      <Footer />
       </div>
     )
   }
@@ -100,6 +102,14 @@ const NewsArticle = React.createClass({
 
   render : function(){
 
+    const {
+      FacebookShareButton,
+      TwitterShareButton,
+    } = ShareButtons;
+
+    const FacebookIcon = generateShareIcon('facebook');
+    const TwitterIcon = generateShareIcon('twitter');
+
     var newsBanner = require('../imgs/lightBanner1.png');
 
     return (
@@ -111,15 +121,17 @@ const NewsArticle = React.createClass({
         }}
       >
         <Link to={{ pathname: '/newsPage' , query:{id:this.props.id } }} >
+
           <div className = "col-sm-12 newsBanner"
               style={{
                 height:260,
                 background : 'url(' + newsBanner + ') no-repeat center center',
                 backgroundSize : 'cover',
-                marginBottom: 40,
+                marginBottom: 60,
               }}
           >
           </div>
+
         </Link>
         <Link to={{ pathname: '/newsPage' , query:{id:this.props.id } }} >
           <div
@@ -145,31 +157,53 @@ const NewsArticle = React.createClass({
       >
         {this.props.article}
       </div>
+
+      <div className="shareNews col-sm-offset-3 col-sm-3">
+        <div
+          style={{
+            marginLeft: 18,
+            marginTop:32,
+          }}>
+              <div className="shareButton">
+                <FacebookShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                  <FacebookIcon size={32} round={true} />
+                </FacebookShareButton>
+              </div>
+
+
+              <div className="shareButton">
+                <TwitterShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                  <TwitterIcon size={32} round={true} />
+                </TwitterShareButton>
+              </div>
+          </div>
+      </div>
+
       <div
-        className="col-sm-offset-10 col-sm-1 "
+        className="col-sm-offset-4 col-sm-1 "
         style={{
           height: 60,
         }}
       >
-      <Link to={{ pathname: '/newsPage' , query:{id:this.props.id } }} >
-        <div className="newsArticleReadMore btn btn-default"
-          style={{
-            height: 40,
-            float: 'right',
-            marginTop:30,
-            marginRight:20,
-            opacity:0.7,
-          }}
-        >
-          <i className="glyphicon glyphicon-arrow-right"
-            aria-hidden="true"
+        <Link to={{ pathname: '/newsPage' , query:{id:this.props.id } }} >
+          <div className="newsArticleReadMore btn btn-default"
             style={{
-              fontSize:26,
-              color:'#999'
+              height: 40,
+              float: 'right',
+              marginTop:30,
+              marginRight:20,
+              opacity:0.7,
             }}
-          ></i>
-        </div>
-      </Link>
+          >
+            <i className="glyphicon glyphicon-arrow-right"
+              aria-hidden="true"
+              style={{
+                fontSize:26,
+                color:'#999'
+              }}
+            ></i>
+          </div>
+        </Link>
 
       </div>
 

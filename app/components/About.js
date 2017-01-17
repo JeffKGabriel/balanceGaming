@@ -5,6 +5,9 @@ var Link = ReactRouter.Link;
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
+import Footer from './Footer.js'
+import Background from './Background.js'
+
 const About = React.createClass({
 
   getInitialState: function() {
@@ -25,12 +28,18 @@ const About = React.createClass({
   render: function(){
 
     return(
-      <div className="col-sm-12"
-        style={{
-          marginTop:100,
+      <div className="col-sm-12 contentPage">
+        <Background />
+        <Background />
+        <div style={{
+          marginTop:160,
         }}
-      >
+        >
+        </div>
         About
+        <div className="col-sm-12 beforeFooter">
+        </div>
+        <Footer />
       </div>
     )
   },

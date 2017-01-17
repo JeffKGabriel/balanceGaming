@@ -14,6 +14,11 @@ const Main = React.createClass({
   //mixins: [myHistory],
 
   render: function(){
+
+    console.log(this);
+
+
+
     return(
       <div>
         <Header activeTab={this.props.location.pathname} />
@@ -26,7 +31,6 @@ const Main = React.createClass({
           >
             {React.cloneElement(this.props.children, {key:this.props.location.pathname})}
           </ReactCSSTransitionGroup>
-          <Footer />
       </div>
     )
   },

@@ -12,12 +12,13 @@ const HomeRosterPanel = React.createClass({
     var pic = this.props.info.pic;
     //console.log("player info");
     //console.log(this.props.info);
+    console.log(pic);
 
 
     return(
 
       <div className="homeRosterPanel">
-        <Link to={{ pathname: '/PlayerProfile' , query:{id:this.props.info.id } }} >
+        <Link to={{ pathname: '/PlayerProfile' , state: { scrollToTop: true } , query:{id:this.props.info.id } }} >
           <div className="homeRosterPlayerPic"
           style={{
             background : 'url(' + pic + ') no-repeat center center',
@@ -70,6 +71,23 @@ const HomeRosterPanel = React.createClass({
           </div>
           </div>
         </div>
+
+        <div className="playerSocial">
+          <div className="playerSocialIcon">
+            <i className="fa fa-twitter" aria-hidden="true"></i>
+          </div>
+          <div className="playerSocialIcon">
+            <i className="fa fa-facebook-square" aria-hidden="true"></i>
+          </div>
+          <div className="playerSocialIcon"
+          style={{
+            marginTop:5,
+          }}
+          >
+            <i className="fa fa-twitch" aria-hidden="true"></i>
+          </div>
+        </div>
+
       </div>
 
     )

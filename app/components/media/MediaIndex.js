@@ -179,7 +179,7 @@ const MediaIndex = React.createClass({
               <div>
                 <div className="sliderContent">
                   <YouTube
-                    videoId="1gsxdfyr_P4"
+                    videoId="MAWK5kNDDlM"
                     opts={vidOpts}
                     onReady={this._onReady}
                   />
@@ -199,12 +199,15 @@ const MediaIndex = React.createClass({
               <div>
                 <div className="sliderContent">
                   <YouTube
-                    videoId="MAWK5kNDDlM"
+                    videoId="pS5peqApgUA"
                     opts={vidOpts}
                     onReady={this._onReady}
                   />
                 </div>
               </div>
+
+
+
               <div><h3>4</h3></div>
               <div><h3>5</h3></div>
               <div><h3>6</h3></div>

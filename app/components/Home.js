@@ -20,6 +20,17 @@ const Home = React.createClass({
 
   render: function(){
 
+
+
+    console.log(this.props.children.passState);
+
+    var newsList =  this.props.children.passState.news.slice(1).map( (a,k) =>{
+      return(
+        <HomeNewsListEntry title={a.title} date={a.date}  banner={a.banner} key={k} id={a.id} > </HomeNewsListEntry>
+      )
+    });
+
+
     return(
       <div className="contentPage">
         <Background />
@@ -48,7 +59,7 @@ const Home = React.createClass({
           >
             <div >
 
-            <HomeNewsHeader></HomeNewsHeader>
+            <HomeNewsHeader news={this.props.children.passState.news}></HomeNewsHeader>
 
 
             </div>
@@ -67,13 +78,8 @@ const Home = React.createClass({
                 height:450,
               }}>
 
-              <HomeNewsListEntry img="bannerRed" > </HomeNewsListEntry>
 
-              <HomeNewsListEntry img="BannerGreen" > </HomeNewsListEntry>
-
-              <HomeNewsListEntry img="BannerYellow" > </HomeNewsListEntry>
-
-              <HomeNewsListEntry img="greyBanner" > </HomeNewsListEntry>
+                {newsList}
 
 
             </div>

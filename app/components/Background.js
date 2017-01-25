@@ -1,16 +1,23 @@
 var React = require('react');
 
+var bgTiled = require('../imgs/BG_tiled.png');
+var bgTiledSmall = require('../imgs/BG_600.png')
+var bgTiledSmallLight = require('../imgs/BG_600_Lighter.png')
+
+
+
+
 const Background = (props) => (
       <div>
         <div
           className="col-sm-12 homeBackground"
           style={{
             height:1300,
-            //background : 'url(' + 'https://images.unsplash.com/photo-1474518665815-99456f56c531?dpr=2&auto=format&fit=crop&w=1500&h=844' + ') no-repeat center center',
-            background : 'url(' + 'https://cdn.wallpaperdirect.com/shared-assets/images/products/120170orig.jpg' + ') repeat ',
+          //  background : 'url(' + 'https://cdn.wallpaperdirect.com/shared-assets/images/products/120170orig.jpg' + ') repeat ',
+            background : 'url(' + bgTiledSmallLight + ') repeat ',
             backgroundSize : '',
-            backgroundColor : "#FFF",
-            opacity:0.1,
+            backgroundColor : "#1f1f1f",
+            opacity:0.15,
             position: 'absolute',
           }}
         >

@@ -1,9 +1,28 @@
 var React = require('react');
+var ReactRouter = require('react-router');
+var Link = ReactRouter.Link;
+
+import {
+  ShareButtons,
+  ShareCounts,
+  generateShareIcon
+} from 'react-share';
 
 var HomeNewsHeader = (props) => {
 
+  const {
+    FacebookShareButton,
+    TwitterShareButton,
+  } = ShareButtons;
 
-  var rtzHead = require('../imgs/rtzHeadRed.png');
+  const FacebookIcon = generateShareIcon('facebook');
+  const TwitterIcon = generateShareIcon('twitter');
+
+
+  var topNews = props.news[0];
+
+
+  var boxPic = require('../imgs/'+topNews.boxPic);
 
   return(
 
@@ -16,11 +35,12 @@ var HomeNewsHeader = (props) => {
           paddingRight:0,
         }}
       >
+      <Link to={{ pathname: '/NewsPage' , state: { scrollToTop: true } , query:{id:topNews.id } }} >
         <div
           className="col-sm-12 homeNewsPic"
           style={{
             zIndex:2,
-            background : 'url(' + rtzHead + ') no-repeat center center',
+            background : 'url(' + boxPic + ') no-repeat center center',
             height: 450,
             paddingTop:32,
           }}
@@ -28,37 +48,57 @@ var HomeNewsHeader = (props) => {
 
 
           <div className="homeNewsTitle">
-            Arteezy Joins
+            {topNews.title}
           </div>
           <div className="homeNewsTitle">
-            Dota Team
+
           </div>
           <div className="homeNewsDate">
-            Jan 3, 2017
+            {topNews.date}
           </div>
 
         </div>
+
+      </Link>
 
 
       </div>
 
       <div
-        className="col-sm-6 homeNewsArticleBox"
-        style={{
-          paddingRight:0,
-          paddingLeft:0,
-          height:350,
-          marginTop:50,
-          display:'flex',
-          backgroundColor: '#FFF',
-        }}
-      >
-
+        className="col-sm-6 homeNewsArticleBox">
 
         <div
           className="homeNewsArticle col-sm-12"
         >
-        There aare many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures
+        {topNews.article}
+        </div>
+
+        <div
+          className="homeNewsArticleReadMore col-sm-12"
+        >
+            <div className="homeNewsReadMoreSocial">
+
+              <div className="shareButton">
+                <FacebookShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                  <FacebookIcon size={30} round={true} />
+                </FacebookShareButton>
+              </div>
+
+              <div className="shareButton">
+                <TwitterShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                  <TwitterIcon size={30} round={true} />
+                </TwitterShareButton>
+              </div>
+
+            </div>
+
+            <div className="homeNewsReadMoreLink">
+              <Link to={{ pathname: '/NewsPage' , state: { scrollToTop: true } , query:{id:topNews.id } }} >
+                  Read More
+              </Link>
+            </div>
+
+
         </div>
 
 

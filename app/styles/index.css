@@ -5,6 +5,12 @@ html{
 body{
   height:100%;
   min-width:600px;
+  /* background-color: #1f1f1f; */
+  background-color: #FAFAFA;
+}
+
+.noPadding{
+  padding: 0;
 }
 
 
@@ -34,7 +40,7 @@ body{
   cursor: pointer;
 }
 .footerLeftLinks div:hover{
-  color: #b5e5f9;
+  color: #75B5FC;
 }
 
 .footerRightLinks{
@@ -53,7 +59,7 @@ body{
 }
 
 .footerIcon:hover{
-  color: #b5e5f9;
+  color: #75B5FC;
 }
 
 .tradeMark{
@@ -64,9 +70,14 @@ body{
 .siteHeader{
   position: fixed;
   z-index: 10;
-  background-color: rgba(255,255,255,0.97);
+  background-color: rgba(250,250,250,0.3);
   box-shadow: 0 3px 3px rgba(0,0,0,.05);
   height:80;
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+}
+
+.siteHeader:hover{
+  background-color: rgba(250,250,250,0.9);
 }
 
 .MenuUL{
@@ -78,7 +89,10 @@ body{
   font-size: 17px;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
-  color:#777;
+  color:#555;
+}
+.menuUL a:hover{
+  color: #75B5FC;
 }
 
 .headerMenu{
@@ -121,6 +135,7 @@ body{
   font-size: 48px;
   margin-top: 70vh;
   text-align: center;
+  color: #CCC;
 }
 
 
@@ -130,6 +145,7 @@ body{
   overflow: hidden;
   text-align: center;
   opacity: 0.6;
+  color: #555;
 }
 .homeHeader:before,
 .homeHeader:after{
@@ -220,6 +236,10 @@ body{
   color: #777;
   margin: 4px;
   cursor: pointer;
+}
+
+.playerSocialIcon:hover{
+  color: #75B5FC;
 }
 
 .homeRosterPlayerInfo{
@@ -348,6 +368,13 @@ border-right: 1px solid #CCC;
   }
 
 
+  .rosterBanner{
+    height: 260px;
+    box-shadow: 0 3px 3px rgba(0,0,0,.02);
+
+  }
+
+
 
 .newsTitleBox{
   border-right: 1px solid #CCC;
@@ -359,11 +386,17 @@ border-right: 1px solid #CCC;
 .newsTitle{
   text-align: right;
   font-size: 36;
+  text-decoration: none;
+  color:#333;
+
 }
+
 
 .newsDate{
   text-align: right;
   font-size: 18;
+  color:#555;
+
 }
 
 .newsArticleBox{
@@ -372,6 +405,7 @@ border-right: 1px solid #CCC;
   font-family: 'Roboto Slab', serif;
   padding-top: 20px;
   padding-left: 30px;
+  color: #555;
 }
 
 .contentPage{
@@ -394,6 +428,7 @@ border-right: 1px solid #CCC;
 
 .newsBanner{
   box-shadow: 0 6px 6px rgba(0,0,0,.04);
+  opacity: 0.7;
 }
 
 .newsPageTitle{
@@ -403,6 +438,8 @@ border-right: 1px solid #CCC;
   border-bottom: 1px solid #CCC;
   padding-bottom: 14px;
   margin-bottom: 30px;
+  color: #555;
+
 }
 
 .newsPageDate{
@@ -414,6 +451,7 @@ border-right: 1px solid #CCC;
   font-family: 'Roboto Slab', serif;
   font-size: 18;
   margin-top: 20;
+  color: #555;
 }
 
 .shareNews{
@@ -428,8 +466,14 @@ border-right: 1px solid #CCC;
   float: left;
   margin-right: 14px;
   cursor: pointer;
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  opacity: 0.5;
+
 }
 
+.shareButton:hover{
+  opacity: 1;
+}
 
 
 
@@ -445,7 +489,7 @@ border-right: 1px solid #CCC;
 .homeBackgroundAfter{
   display: block;
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #FFF 100%);
+  background-image: linear-gradient(to bottom, rgba(250, 250, 250, 0) 0, #FAFAFA 100%);
   margin-top: -500px;
   height: 500px;
   top: 1300;
@@ -493,8 +537,35 @@ border-right: 1px solid #CCC;
   overflow: hidden;
   text-align: left;
   font-size: 17;
-  color: #555;
+  background-color: #FFF;
   letter-spacing: 0.05em;
+  color: #555;
+  border-radius: 5px;
+  overflow: hidden;
+  height:280;
+
+}
+
+.homeNewsArticleReadMore{
+  font-family: 'Roboto Slab', serif;
+
+  height:70;
+  text-align: center;
+  line-height: 34px;
+  background-color: #FFF;
+  color: #999;
+
+
+}
+
+.homeNewsReadMoreSocial{
+  padding-top: 16;
+  margin-left: 20;
+}
+
+.homeNewsReadMoreLink{
+  float:right;
+  margin-right: 20px;
 }
 /*
 .homeNewsArticle:first-child:first-letter {
@@ -512,7 +583,7 @@ border-right: 1px solid #CCC;
 .homeNewsList{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .homeNewsListEntry{
@@ -523,6 +594,7 @@ border-right: 1px solid #CCC;
   transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
   cursor:pointer;
   opacity: 0.8;
+  margin-bottom: 12;
 
 }
 
@@ -538,7 +610,7 @@ border-right: 1px solid #CCC;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   text-align: right;
-
+  text-shadow: 0 -4px 3px rgba(255, 255, 255, 0.3), 0 3px 4px rgba(0, 0, 0, 0.2);
 }
 .homeNewsListDate{
   font-family: 'Raleway', sans-serif;
@@ -559,6 +631,15 @@ border-right: 1px solid #CCC;
 }
 .homeNewsArticleBox{
   box-shadow: 0 0 8px 8px rgba(0,0,0,0.02);
+
+  padding-right:0;
+  padding-left:0;
+  height:350;
+  margin-top:50;
+  display: flex;
+  flex-direction: column;
+  backgroundColor: "#FFF";
+
 }
 
 
@@ -567,17 +648,60 @@ border-right: 1px solid #CCC;
 .profilePic{
   box-shadow: 0 16px 16px rgba(0,0,0,.16);
   padding: 0;
+
+    width:280px;
+
+    margin-top: 40px;
+    float:right;
+
+      width:280px;
+      height:280px;
+      overflow: hidden;
+      z-index: 5;
+
+      border: 8px solid #FFF;
 }
 
 .profileImg{
-  width:100%;
+
+  width:280px;
+
 }
+
+.profileTitlesInput{
+  height: 30;
+  font-size: 18;
+  text-align: center;
+  margin-bottom: 20;
+
+}
+
+.profileTitlesTrophy{
+  background-color: red;
+  height:30;
+  margin: 0 auto;
+}
+
 .profileTitle{
   text-align: center;
-  height:60px;
-  font-size: 36;
+  height:50px;
+  font-size: 48;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.profileTitleBackground{
+  height: 116px;
+  /*
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  */
+  padding-top: 16px;
+  margin-bottom: 30px;
+
 }
 
 .profileInfo{
@@ -588,12 +712,28 @@ border-right: 1px solid #CCC;
   font-weight: 300;
 }
 
+.profileGameLogo{
+  display:flex;
+  height: 80px;
+  background-color: blue;
+}
+
 .profileBio{
   font-family: 'Roboto Slab', serif;
   font-size: 18;
   margin-top: 8;
 }
 
+.profileSocial{
+  width:280px;
+  height: 60px;
+  float: right;
+  margin-top: 45px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
 
 .newsLetterForm{
   display: flex;
@@ -695,12 +835,184 @@ border-right: 1px solid #CCC;
 }
 
 .partnerLinkIcon:hover{
-  color: red;
+  color: #75B5FC;
 }
 
 .partnerLinks{
   display: flex;
   justify-content: center;
+}
+
+
+
+
+.aboutBio{
+  font-family: 'Roboto Slab', serif;
+  font-size: 19;
+  color:#555;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.aboutBio p{
+  margin-bottom: 30px;
+}
+
+.aboutTeam{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.aboutTeamEntry{
+  height: 300;
+  width: 300;
+  margin: 20;
+  border-radius: 100px;
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  padding-top: 180;
+  box-shadow: 0 10px 10px rgba(0,0,0,.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.aboutTeamEntry:hover{
+  padding-top: 20;
+}
+.aboutTeamEntry * {
+  position: relative;
+}
+
+
+.overlay {
+  position: relative;
+}
+
+.overlay:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:0;
+  transition: all 250ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  border-radius: 100px;
+
+
+  opacity: 0;
+  transition:opacity 400ms linear;
+
+}
+
+.overlay:hover:before  {
+  /* display: block; */
+  opacity:1;
+}
+
+.myColorHover:before {
+  background-color: rgba(28,87,152,0.9);
+}
+
+
+
+.aboutName{
+  text-align: center;
+  color:#f1f1f1;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18;
+  font-weight: 900;
+
+
+text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+
+}
+.aboutTitle{
+  text-align: center;
+  color:#f1f1f1;
+  margin-top: 4px;
+  font-family: 'Roboto Slab', serif;
+  font-size: 16;
+
+
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+
+}
+
+.aboutTeamBio{
+  padding-top: 15;
+  font-size: 12;
+  color:#f1f1f1;
+  opacity: 0;
+  transition: opacity 600ms cubic-bezier(0.02, 0.01, 0.47, 1);
+  padding-left: 10px;
+  padding-right: 10px;
+  visibility: hidden;
+  display: block;
+  text-align: center;
+  height:0;
+}
+
+.aboutTeamEntry:hover .aboutTeamBio{
+  height: inherit;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 400ms;
+}
+
+.aboutTeamSocial{
+  font-size: 28px;
+  color:#f1f1f1;
+  opacity: 0;
+  transition: all 600ms cubic-bezier(0.02, 0.01, 0.47, 1);
+
+
+}
+
+.aboutTeamSocialBox{
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.aboutTeamEntry:hover .aboutTeamSocial{
+  opacity: 0.9;
+  transition-delay: 600ms;
+}
+
+.aboutTeamFadeIn{
+  display: block;
+}
+.aboutTeamEntry:hover .aboutTeamFadeIn{
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.embedTwitterProfile{
+  width: 280;
+  float:right;
+  opacity:1;
+  transition: opacity 1s;
+}
+
+.myFade {
+opacity:0;
 }
 
 

@@ -13,6 +13,7 @@ import rosterReducer from './reducers/rosterReducer.js'
 
 
 
+
 // Store
 const store = createStore(
   combineReducers({
@@ -26,7 +27,7 @@ const store = createStore(
   )
 )
 
-
+/*
 
 
 fetch('http://104.131.167.44:8888/api/news', {
@@ -51,6 +52,9 @@ fetch('http://104.131.167.44:8888/api/roster', {
 }).catch(function(err) {
   console.log(err);
 });
+
+*/
+
 
 
 ReactDOM.render(

@@ -12,18 +12,15 @@ import HomeRosterPanel from '../HomeRosterPanel.js'
 import Footer from '../Footer.js'
 import Background from '../Background.js'
 
+
 const Team = React.createClass({
 
-
-
   render: function(){
-
-    console.log(this.props.location.query.id);
 
     let gameName = this.props.location.query.id;
 
     let rosters = [gameName].map( (game,k)=>{
-                let gameTeam = this.props.teams.filter(m=>m.game == game);
+                let gameTeam = this.props.children.passState.rosters.filter(m=>m.game == game);
                 return <TeamPanels players={gameTeam} gameName={game} key={k} />
               });
 
@@ -75,7 +72,7 @@ const Team = React.createClass({
             marginBottom:80,
           }}
         >
-          <HomeHeader>{this.props.gameName}</HomeHeader>
+          <HomeHeader logo="smashLogo2.jpg" >{this.props.gameName}</HomeHeader>
           <div className="col-sm-12 rosterPanelBox">
             {players}
           </div>
@@ -86,7 +83,7 @@ const Team = React.createClass({
   });
 
 
-
+/*
 
   // Map Redux state to component props
   function mapStateToProps(state) {
@@ -110,3 +107,8 @@ const Team = React.createClass({
   export default connect(
     mapStateToProps
   )(Team)
+
+
+  */
+
+  export default Team

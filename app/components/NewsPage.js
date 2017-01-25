@@ -30,14 +30,15 @@ const NewsPage = React.createClass({
     const TwitterIcon = generateShareIcon('twitter');
 
 
-    const index = this.props.news.findIndex((m) => m.id == this.props.location.query.id);
-    console.log(this.props.news[index]);
+    const index = this.props.children.passState.news.findIndex((m) => m.id == this.props.location.query.id);
 
-    let chosenArticle = (index >= 0 ? this.props.news[index].article : "")
-    let chosenTitle = (index >= 0 ? this.props.news[index].title : "")
-    let date = (index >= 0 ? this.props.news[index].date : "")
+    let chosenArticle = (index >= 0 ? this.props.children.passState.news[index].article : "")
+    let chosenTitle = (index >= 0 ? this.props.children.passState.news[index].title : "")
+    let date = (index >= 0 ? this.props.children.passState.news[index].date : "")
+    let banner = (index >= 0 ? this.props.children.passState.news[index].banner : "")
 
-    var newsBanner = require('../imgs/lightBanner1.png')
+
+    var newsBanner = require('../imgs/'+banner)
 
 
     return(
@@ -95,17 +96,18 @@ const NewsPage = React.createClass({
           </div>
 
         </div>
-        <div className="col-sm-12 beforeFooter"
-            style={{
-              marginBottom:100,
-            }}
-        ></div>
+        <div className="col-sm-12 beforeFooter">
+        </div>
         <Footer />
       </div>
     )
   },
 
 });
+
+export default NewsPage
+
+/*
 
 // Map Redux state to component props
 function mapStateToProps(state) {
@@ -131,3 +133,5 @@ export default connect(
   mapStateToProps,
   //mapDispatchToProps
 )(NewsPage)
+
+*/

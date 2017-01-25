@@ -4,31 +4,31 @@ var Link = ReactRouter.Link;
 
 var Header = (props) =>{
 
-    var sliderOffset = 12; //Home
+    var sliderOffset = 10; //Home
     switch(props.activeTab.substring(1)){
       case "News":
-        sliderOffset = 78;
+        sliderOffset = 76;
         break;
       case "newsPage":
-        sliderOffset = 78;
+        sliderOffset = 76;
         break;
       case "Rosters":
-        sliderOffset = 142;
+        sliderOffset = 147;
         break;
       case "Team":
-        sliderOffset = 142;
+        sliderOffset = 147;
         break;
       case "PlayerProfile":
-        sliderOffset = 142;
+        sliderOffset = 147;
         break;
       case "Media":
-        sliderOffset = 216;
+        sliderOffset = 221;
         break;
       case "Partners":
-        sliderOffset = 293;
+        sliderOffset = 297;
         break;
       case "About":
-        sliderOffset = 367;
+        sliderOffset = 376;
         break;
     }
 

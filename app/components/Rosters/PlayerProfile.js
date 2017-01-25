@@ -5,17 +5,34 @@ var Link = ReactRouter.Link;
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
+import HomeHeader from '../HomeHeader.js'
+
+
 import Background from '../Background.js'
 import Footer from '../Footer.js'
 
 
+
 const PlayerProfile = React.createClass({
+
+  componentDidMount: function() {
+
+    window.requestAnimationFrame(function() {
+
+      setTimeout(function(){   document.getElementById("twitterEmbed").classList.toggle('myFade');    }, 2000);
+
+        twttr.widgets.load( document.getElementById("twitterEmbed") )
+
+    });
+  },
+
 
   render: function(){
 
-    //console.log(this.props.teams);
 
-    const rightPlayer = this.props.teams.filter(m=> m.id==this.props.location.query.id );
+    var newsBanner = require('../../imgs/lightBanner1.png')
+
+    const rightPlayer = this.props.children.passState.rosters.filter(m=> m.id==this.props.location.query.id );
     const player = rightPlayer.map((a,k)=> {
       console.log(a);
       return(
@@ -34,10 +51,13 @@ const PlayerProfile = React.createClass({
       <div className="col-sm-12 contentPage">
         <Background />
         <div style={{
-          marginTop:160,
+          marginTop:100,
         }}
         >
         </div>
+
+        <RosterBanner banner={newsBanner} />
+
         <div className="col-sm-offset-2 col-sm-8">
           {player}
         </div>
@@ -55,6 +75,16 @@ const PlayerProfile = React.createClass({
 
 });
 
+const RosterBanner = (props)=>(
+  <div className="col-xs-12 col-md-offset-1 col-md-10 rosterBanner"
+  style={{
+    background : 'url(' + props.banner + ') no-repeat center center',
+    backgroundSize : 'cover',
+  }}
+  >
+  </div>
+)
+
 
 const Player = (props) =>(
   <div>
@@ -68,34 +98,126 @@ const PlayerPic = (props) =>{
   let reqPic = require('../../imgs/'+props.pic);
 
   return(
-    <div className="col-sm-4 profilePic">
-      <img className="img-responsive profileImg" src={reqPic} />
+    <div className="col-sm-4 noPadding">
+      <div className="profilePic">
+        <img className="img-responsive profileImg" src={reqPic} />
+      </div>
+
+      <div className="profileSocial">
+
+        <div className="fa fa-twitter partnerLinkIcon" aria-hidden="true">
+        </div>
+
+        <div className="fa fa-facebook-square partnerLinkIcon" aria-hidden="true"
+         style={{
+           marginLeft:32,
+         }}
+        >
+        </div>
+        <div className="fa fa-globe partnerLinkIcon" aria-hidden="true"
+          style={{
+            marginLeft:30,
+          }}
+        >
+        </div>
+
+      </div>
+
+      <div id="twitterEmbed" className="embedTwitterProfile myFade">
+        <a className="twitter-timeline" data-width="280" data-height="500" href="https://twitter.com/TwitterDev"></a>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8">
+          </script>
+      </div>
     </div>
   )
 }
 
 const PlayerInfo = (props) => {
   return(
-    <div className="col-sm-8">
-      <div className="col-sm-12 profileTitle">
-        {props.name}
+    <div className="col-sm-8 noPadding"
+      style={{
+        marginTop: 60,
+      }}
+    >
+      <div className="profileTitleBackground col-sm-12">
+
+        <div className="col-sm-11">
+
+          <div className="col-sm-12 profileTitle">
+            {props.name}
+          </div>
+          <div className="col-sm-12 profileInfo">
+            {props.age} | {props.country}
+          </div>
+        </div>
+
+
+
+
+
+
       </div>
-      <div className="col-sm-12 profileInfo">
-        {props.age} | {props.country}
-      </div>
+
       <div className=" col-sm-offset-1 col-sm-10 profileBio">
         {props.bio}
       </div>
       <div className=" col-sm-offset-1 col-sm-10 profileBio"
         style={{
-          marginTop:24,
+          marginTop:50,
         }}
       >
-        Twitter: qweqweqweqweqwe
+        <HomeHeader fontSize="38" >
+         Titles
+        </HomeHeader>
+
+        <div className="col-sm-12 profileTitlesInput">
+          <div className="col-sm-2 profileTitlesTrophy">
+          </div>
+          <div className="col-sm-8 profileTitlesEvent">
+            Apex Melee Singles
+          </div>
+          <div className="col-sm-2 profileTitlesYear">
+            2011
+          </div>
+        </div>
+
+        <div className="col-sm-12 profileTitlesInput">
+          <div className="col-sm-2 profileTitlesTrophy">
+          </div>
+          <div className="col-sm-8 profileTitlesEvent">
+            Apex Melee Singles
+          </div>
+          <div className="col-sm-2 profileTitlesYear">
+            2011
+          </div>
+        </div>
+
+        <div className="col-sm-12 profileTitlesInput">
+          <div className="col-sm-2 profileTitlesTrophy">
+          </div>
+          <div className="col-sm-8 profileTitlesEvent">
+            Apex Melee Singles
+          </div>
+          <div className="col-sm-2 profileTitlesYear">
+            2011
+          </div>
+        </div>
+
+        <div className="col-sm-12 profileTitlesInput">
+          <div className="col-sm-2 profileTitlesTrophy">
+          </div>
+          <div className="col-sm-8 profileTitlesEvent">
+            Apex Melee Singles
+          </div>
+          <div className="col-sm-2 profileTitlesYear">
+            2011
+          </div>
+        </div>
+
+
       </div>
-      <div className=" col-sm-offset-1 col-sm-10 profileBio">
-        Twitch: qweqweqweqweqwe
-      </div>
+
+
     </div>
   )
 }
@@ -104,7 +226,7 @@ const PlayerInfo = (props) => {
 
 
 
-
+/*
 
 
 
@@ -130,3 +252,7 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps
 )(PlayerProfile)
+
+*/
+
+export default PlayerProfile

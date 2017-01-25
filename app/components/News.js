@@ -31,29 +31,11 @@ import {
 
 const News = React.createClass({
 
-
-  getInitialState: function() {
-    return {
-      newsList : []
-    }
-  },
-
-  componentWillMount: function () {
-  },
-
-  componentDidMount: function () {
-  },
-
-  componentDidUpdate() {
-  },
-
   render: function(){
 
-
-
-
     //const articles = this.state.newsList.map((a,k) =>{
-      const articles = this.props.news.map((a,k) =>{
+    //  const articles = this.props.news.map((a,k) =>{
+    const articles = this.props.children.passState.news.map((a,k) =>{
         return(
           <NewsArticle
            key = {k}
@@ -62,6 +44,7 @@ const News = React.createClass({
            date = {a.date}
            article = {a.article}
            name = {a.name}
+           banner = {a.banner}
           />
         );
       });
@@ -110,7 +93,7 @@ const NewsArticle = React.createClass({
     const FacebookIcon = generateShareIcon('facebook');
     const TwitterIcon = generateShareIcon('twitter');
 
-    var newsBanner = require('../imgs/lightBanner1.png');
+    var newsBanner = require('../imgs/'+this.props.banner);
 
     return (
       <div
@@ -207,16 +190,12 @@ const NewsArticle = React.createClass({
 
       </div>
 
-
-
-
-
       </div>
     );
   },
 });
 
-
+/*
 
 // Map Redux state to component props
 function mapStateToProps(state) {
@@ -234,10 +213,14 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
+*/
 
 
-//export default Footer
+
+export default News
+/*
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(News)
+*/

@@ -28,7 +28,7 @@ const AllTeams = React.createClass({
           <div className="rosterGallery">
             <ul>
               <li className="rosterGalleryPic">
-                <Link to={{ pathname: '/Team' , state: { scrollToTop: true } , query:{id:"smash" } }} >
+                <Link to={{ pathname: '/Team' , state: { scrollToTop: true } , query:{id:"Smash" } }} >
                   <img src="http://lorempixel.com/300/500/city/?1" />
                 </Link>
               </li>

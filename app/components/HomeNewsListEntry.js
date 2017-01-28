@@ -19,7 +19,7 @@ const HomeNewsListEntry = React.createClass({
 
         <Link to={{ pathname: '/NewsPage' , state: { scrollToTop: true } , query:{id:this.props.id } }} >
 
-          <div className="col-sm-12 homeNewsListEntry"
+          <div className="col-md-12 col-sm-8 col-sm-offset-2 homeNewsListEntry"
             style={{
               background : 'url(' + BannerBG + ') no-repeat center center',
             }}
@@ -34,10 +34,10 @@ const HomeNewsListEntry = React.createClass({
             }}
           >
             <div className="homeNewsListTitle">
-              News Title
+              {this.props.title}
             </div>
             <div className="homeNewsListDate">
-              Jan 8, 2016
+              {this.props.date}
             </div>
           </div>
           </div>

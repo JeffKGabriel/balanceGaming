@@ -12,6 +12,14 @@ import Footer from '../Footer.js'
 import Background from '../Background.js'
 
 
+var rosterMelee = require('../../imgs/RosterGames/Games01.jpg');
+var rosterOverwatch = require('../../imgs/RosterGames/Games02.jpg');
+var rosterGears = require('../../imgs/RosterGames/Games03.jpg');
+var rosterStreetFighter = require('../../imgs/RosterGames/Games04.jpg');
+var rosterCSGO= require('../../imgs/RosterGames/Games05.jpg');
+var rosterSoonDark= require('../../imgs/RosterGames/Games_Soon_Dark.jpg');
+var rosterSoonLight= require('../../imgs/RosterGames/Games_Soon_Light.jpg');
+
 
 
 
@@ -19,38 +27,46 @@ const AllTeams = React.createClass({
 
 
 
+
+
   render: function(){
+
+    console.log(window.innerWidth);
+
 
     return(
       <div className="col-sm-12 contentPage">
         <Background />
-        <div className="col-sm-10 col-sm-offset-1 rosterGalleryBox">
+        <div className="col-sm-12 col-sm-offset-0 rosterGalleryBox">
           <div className="rosterGallery">
             <ul>
-              <li className="rosterGalleryPic">
-                <Link to={{ pathname: '/Team' , state: { scrollToTop: true } , query:{id:"Smash" } }} >
-                  <img src="http://lorempixel.com/300/500/city/?1" />
+              {window.innerWidth >= 1200 ?
+                <li className="rosterGalleryPic" style={{opacity:0.5}}><img src={rosterSoonDark} /> </li>
+                : null
+              }
+              <li className="rosterGalleryPic"
+                style={{
+                  opacity:0.5
+                }}
+              >
+                  <img src={rosterSoonLight} />
+              </li>
+              <li id="meleeRosterPic" className="rosterGalleryPic">
+                <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Melee" } }} >
+                  <img src={rosterMelee} />
                 </Link>
               </li>
-              <li className="rosterGalleryPic">
-                <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Overwatch" } }} >
-                  <img src="http://lorempixel.com/300/500/city/?2" />
-                </Link>              </li>
-              <li className="rosterGalleryPic">
-                <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Dota 2" } }} >
-                  <img src="http://lorempixel.com/300/500/city/?3" />
-                </Link>
+              <li className="rosterGalleryPic"
+                style={{
+                  opacity:0.5
+                }}
+              >
+                  <img src={rosterSoonLight} />
               </li>
-              <li className="rosterGalleryPic">
-                <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Starcraft 2" } }} >
-                  <img src="http://lorempixel.com/300/500/city/?4" />
-                </Link>
-              </li>
-              <li className="rosterGalleryPic">
-                <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"CSGO" } }} >
-                  <img src="http://lorempixel.com/300/500/city/?5" />
-                </Link>
-              </li>
+              {window.innerWidth >= 1200 ?
+                <li className="rosterGalleryPic" style={{opacity:0.5}}><img src={rosterSoonDark} /> </li>
+                : null
+              }
             </ul>
           </div>
         </div>

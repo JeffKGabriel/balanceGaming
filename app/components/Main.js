@@ -55,22 +55,13 @@ const Main = React.createClass({
       ],
       rosters:[
         {
-          "game": "Smash",
+          "game": "Melee",
           "pic": "isaiRoster.png",
           "bio": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
           "country": "USA",
           "name": "Isai",
           "age": 17,
           "id": 4,
-        },
-        {
-          "game": "Dota 2",
-          "pic": "sumailRoster.jpg",
-          "bio": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-          "country": "Pakistan",
-          "name": "Sumail",
-          "age": 17,
-          "id": 3,
         },
         {
           "game": "Dota 2",
@@ -81,15 +72,6 @@ const Main = React.createClass({
           "age": 24,
           "id": 2,
         },
-        {
-          "game": "Starcraft 2",
-          "pic": "flashRoster.jpg",
-          "bio": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like). It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
-          "country": "South Korea",
-          "name": "Flash",
-          "age": 26,
-          "id": 6,
-        }
       ],
       partners:[
 
@@ -102,8 +84,8 @@ const Main = React.createClass({
           "linkedIn" : "https://www.linkedin.com/in/graham-peters-43a26361",
           "resume" : "https://www.dropbox.com/s/6a3jennm3rfqs7g/Graham%20Peters%20Resume.doc?dl=0",
           "bio" : "Entrepreneur with over 10 years of experience in the technology, e-commerce, e-sports and gaming industries. Highly motivated to grow within the e-sports market and invest further in its growth as well. Past entrepreneurship ventures include real market trading, tournament hosting, talent management, and content creation.",
-          "twitch" : "",
-          "pic" : "AboutGraham.jpg",
+          "twitch" : "https://www.twitch.tv/trvirtua",
+          "pic" : "About/AboutGraham2.jpg",
           "website" : "",
         },
         {
@@ -114,7 +96,7 @@ const Main = React.createClass({
           "resume" : "",
           "bio" : "Over 7 years of corporate finance & real estate experience working with Investment and Operations firms, responsible for cash flow forecasting; financial, credit and covenant analysis; investor, bank and financial statement reporting. Passionate Super Smash Bros. Wii U and Melee player. Former competitive World of Warcraft PvP and Team Fortress 2 player including heavy involvement in requisite communities.",
           "twitch" : "",
-          "pic" : "logo.png",
+          "pic" : "About/AboutDalton.png",
           "website" : "",
         },
         {
@@ -159,7 +141,7 @@ const Main = React.createClass({
           "resume" : "",
           "bio" : "Competative gaming fan and javascript junkie. Enjoys minimal web design. Currently interested in mobile development and social marketing.",
           "twitch" : "",
-          "pic" : "AboutJeff.jpg",
+          "pic" : "About/AboutJeff2.png",
           "website" : "http://jgab.me/",
         },
 

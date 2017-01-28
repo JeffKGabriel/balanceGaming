@@ -94,7 +94,7 @@ const AboutTeam = React.createClass({
         <div className="aboutTitle">
           {this.props.info.title}
         </div>
-        
+
         <div className="aboutTeamFadeIn">
 
           <div className="aboutTeamBio">
@@ -118,22 +118,43 @@ const AboutSocial = React.createClass({
 
     render: function(){
 
+      console.log(this.props.info);
+
       return(
         <div className="aboutTeamSocialBox">
-          <div className="fa fa-twitter partnerLinkIcon" aria-hidden="true">
-          </div>
-          <div className="fa fa-facebook-square partnerLinkIcon" aria-hidden="true"
-           style={{
-             marginLeft:12,
-           }}
-          >
-          </div>
-          <div className="fa fa-globe partnerLinkIcon" aria-hidden="true"
-            style={{
-              marginLeft:10,
-            }}
-          >
-          </div>
+
+          {this.props.info.twitter !== "" ?
+          <a href={this.props.info.twitter}>
+          <div className="fa fa-twitter aboutTeamSocialIcon" aria-hidden="true"></div>
+          </a>
+          :
+          null
+          }
+
+          {this.props.info.linkedIn !== "" ?
+          <a href={this.props.info.linkedIn}>
+          <div className="fa fa-linkedin-square aboutTeamSocialIcon" aria-hidden="true"></div>
+          </a>
+          :
+          null
+          }
+
+          {this.props.info.twitch !== "" ?
+          <a href={this.props.info.twitch}>
+          <div className="fa fa-twitch aboutTeamSocialIcon" aria-hidden="true"></div>
+          </a>
+          :
+          null
+          }
+
+          {this.props.info.website !== "" ?
+          <a href={this.props.info.website}>
+          <div className="fa fa-globe aboutTeamSocialIcon" aria-hidden="true"></div>
+          </a>
+          :
+          null
+          }
+
         </div>
       )
 

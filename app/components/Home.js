@@ -12,10 +12,30 @@ var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 import Footer from './Footer.js'
 import Background from './Background.js'
 
+var Scroll  = require('react-scroll');
+var ScrollLink       = Scroll.Link;
+var ScrollElement    = Scroll.Element;
+var ScrollEvents     = Scroll.Events;
+var ScrollAnimate    = Scroll.animateScroll;
+var ScrollSpy        = Scroll.scrollSpy;
+var Scroller         = Scroll.scroller;
+
+
+var homeBannerPic = require('../imgs/Home/MainPage.png');
+
 
 
 const Home = React.createClass({
 
+  scrollTo: function() {
+    console.log("should be scrolling");
+    Scroller.scrollTo('myScrollToElement', {
+                            duration: 1500,
+                            delay: 100,
+                            smooth: true,
+                            offset: -190,
+                          })
+  },
 
 
   render: function(){
@@ -37,28 +57,32 @@ const Home = React.createClass({
 
         <div className="homeBanner">
 
+          <div className="homeBannerPic img-responsive">
+            <img src={homeBannerPic} />
+          </div>
+
           <div className="homeBannerDown">
-            <i className="fa fa-chevron-down" aria-hidden="true"></i>
+            <i onClick={this.scrollTo} className="fa fa-chevron-down" aria-hidden="true"></i>
           </div>
 
         </div>
 
 
         <div
-          className="col-sm-offset-1 col-sm-10"
+          className="col-md-offset-1 col-md-10 col-sm-12"
           style={{
             marginTop: 100,
           }}
         >
 
           <div
-            className="col-sm-9"
+            className="col-md-9 col-sm-12"
             style={{
               padding: 15,
             }}
           >
             <div >
-
+            <ScrollElement name="myScrollToElement"></ScrollElement>
             <HomeNewsHeader news={this.props.children.passState.news}></HomeNewsHeader>
 
 
@@ -66,7 +90,7 @@ const Home = React.createClass({
           </div>
 
           <div
-            className="col-sm-3"
+            className="col-md-3 col-sm-12"
             style={{
               //backgroundColor: '#880',
               padding: 15,
@@ -93,7 +117,7 @@ const Home = React.createClass({
 
         <div
           id="homeRoster"
-          className="col-sm-offset-1 col-sm-10 homeRoster"
+          className="col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-12 homeRoster"
           style={{
             //backgroundColor: '#555555',
             marginTop: 180,
@@ -117,7 +141,7 @@ const Home = React.createClass({
 
 
         <div
-          className="col-sm-offset-1 col-sm-5 homePartners"
+          className="col-md-offset-1 col-md-5 col-sm-6 col-sm-offset-0 homePartners"
           style={{
             //backgroundColor: '#555555',
             marginTop: 100,
@@ -133,7 +157,6 @@ const Home = React.createClass({
             }}
           >
             <div style={{
-              height:400,
             }}>
 
               <div className="partnersBox">
@@ -182,7 +205,7 @@ const Home = React.createClass({
         </div>
 
         <div
-          className="col-sm-5 homeNewsLetter"
+          className="col-md-5 col-sm-6 homeNewsLetter"
           style={{
             //backgroundColor: '#555555',
             marginTop: 100,

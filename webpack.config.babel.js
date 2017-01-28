@@ -13,6 +13,9 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   inject: 'body'
 })
 
+const faviconPlugin = new HtmlWebpackPlugin({
+    favicon: PATHS.app + '/imgs/favicons/favicon-96x96.png',
+  })
 
 module.exports = {
   entry: PATHS.app,
@@ -23,7 +26,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"},
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
+      { test: /\.(jpe?g|png|gif|ico)$/, loader: 'url-loader?limit=8192' },
       { test: /\.css$/, loader: "style-loader!css-loader" },
     ]
   },

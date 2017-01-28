@@ -48,41 +48,27 @@ const HomeRosterBox = React.createClass({
     <div
       className="col-sm-12"
       style={{
-        height:530,
+        display: 'flex',
+        justifyContent: 'center',
       }}
     >
 
-      <div className="col-sm-2 homeRosterTeamSelect">
-        <div className="homeRosterThumb"
-          style={{
-            background : 'url(' + overwatchLogo + ') no-repeat center center',
-            backgroundSize : '120px 120px',
-          }}
-        >
-        </div>
+      <div className="homeRosterTeamSelect">
+
         <div className="homeRosterThumb"
           style={{
             background : 'url(' + smashLogo + ') no-repeat center center',
-            backgroundSize : '120px 120px',
+            backgroundSize : '80px 80px',
           }}
         >
         </div>
-        <div className="homeRosterThumb"
-          style={{
-            background : 'url(' + dotaLogo + ') no-repeat center center',
-            backgroundSize : '150px 150px',
-          }}
-        >
-        </div>
+
       </div>
 
-      <div className="col-sm-10 rosterPanelBox">
+      <div className=" rosterPanelBox">
 
-        <HomeRosterPanel info={rosterInfoSumail} />
 
         <HomeRosterPanel info={rosterInfoArteezy} />
-
-        <HomeRosterPanel info={rosterInfoFlash} />
 
         <HomeRosterPanel info={rosterInfoIsai} />
 

@@ -33,11 +33,11 @@ var Header = (props) =>{
     }
 
     return(
-      <div className="col-xs-12 animated fadeInDown siteHeader">
+      <div className="col-xs-12 animated fadeInDown siteHeader noPadding">
 
-        <div className="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10 col-xs-12 row">
+        <div className="col-md-offset-2 col-md-8 col-xs-12 noPadding">
 
-          <div className="col-xs-2"
+          <div className="col-md-2 hidden-sm hidden-xs"
           style={{
             opacity: 0.8,
             padding:0,
@@ -48,44 +48,87 @@ var Header = (props) =>{
             </Link>
           </div>
 
-          <div className="headerMenu">
+            <div className="headerMenu hidden-xs hidden-sm">
 
-            <ul className="MenuUL">
+              <ul className="MenuUL">
 
-              <Link to={{ pathname:'/Home', state: { scrollToTop: true } }}>
-                <li>Home</li>
-              </Link>
+                <Link to={{ pathname:'/Home', state: { scrollToTop: true } }}>
+                  <li>Home</li>
+                </Link>
 
-              <Link to={{ pathname:'/News', state: { scrollToTop: true } }}>
-                <li>News</li>
-              </Link>
+                <Link to={{ pathname:'/News', state: { scrollToTop: true } }}>
+                  <li>News</li>
+                </Link>
 
-              <Link to={{ pathname:'/Rosters', state: { scrollToTop: true } }}>
-                <li>Rosters</li>
-              </Link>
+                <Link to={{ pathname:'/Rosters', state: { scrollToTop: true } }}>
+                  <li>Rosters</li>
+                </Link>
 
-              <Link to={{ pathname:'/Media', state: { scrollToTop: true } }}>
-                <li>Media</li>
-              </Link>
+                <Link to={{ pathname:'/Media', state: { scrollToTop: true } }}>
+                  <li>Media</li>
+                </Link>
 
-              <Link to={{ pathname:'/Partners', state: { scrollToTop: true } }}>
-                <li>Partners</li>
-              </Link>
+                <Link to={{ pathname:'/Partners', state: { scrollToTop: true } }}>
+                  <li>Partners</li>
+                </Link>
 
-              <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
-                <li>About</li>
-              </Link>
+                <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
+                  <li>About</li>
+                </Link>
 
-            </ul>
+              </ul>
 
-            <div className="headerSlider"
-              style={{
-                transform: 'translateX('+sliderOffset+'px)',
-              }}
-            >
+              <div className="headerSlider hidden-xs hidden-sm"
+                style={{
+                  transform: 'translateX('+sliderOffset+'px)',
+                }}
+              >
+              </div>
+
             </div>
 
-          </div>
+            <div className="headerMenuSmall hidden-md hidden-lg hidden-xl">
+
+              <ul className="MenuULSmall col-xs-12 col-sm-8 col-sm-offset-2 noPadding">
+
+                <Link to={{ pathname:'/Home', state: { scrollToTop: true } }}>
+                  <li>Home</li>
+                </Link>
+
+                <Link to={{ pathname:'/News', state: { scrollToTop: true } }}>
+                  <li>News</li>
+                </Link>
+
+                <Link to={{ pathname:'/Rosters', state: { scrollToTop: true } }}>
+                  <li>Rosters</li>
+                </Link>
+
+                <Link to={{ pathname:'/Media', state: { scrollToTop: true } }}>
+                  <li>Media</li>
+                </Link>
+
+                <Link to={{ pathname:'/Partners', state: { scrollToTop: true } }}>
+                  <li>Partners</li>
+                </Link>
+
+                <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
+                  <li>About</li>
+                </Link>
+
+              </ul>
+
+              <div className="headerSlider hidden-xs hidden-sm"
+                style={{
+                  transform: 'translateX('+sliderOffset+'px)',
+                }}
+              >
+              </div>
+
+            </div>
+
+
+
+
 
         </div>
 

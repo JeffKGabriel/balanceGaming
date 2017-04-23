@@ -1,6 +1,6 @@
 var express = require('express');
-var mongoose   = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/db');
+//var mongoose   = require('mongoose');
+//mongoose.connect('mongodb://localhost:27017/db');
 
 var News = require('./models/news');
 var Numbers = require('./models/numbers');
@@ -23,7 +23,7 @@ router.get('/', function(req, res) {
 });
 
 
-// on routes that end in /bears 
+// on routes that end in /bears
 // ----------------------------------------------------
 router.route('/news')
 

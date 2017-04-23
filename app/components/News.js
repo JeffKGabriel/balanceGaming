@@ -54,7 +54,7 @@ const News = React.createClass({
         <Background />
 
       <div
-        className="col-sm-10 col-sm-offset-1"
+        className="col-sm-10 col-sm-offset-1 noPadding"
         style={{
           paddingTop: 160,
         }}
@@ -68,7 +68,7 @@ const News = React.createClass({
         </div>
           {articles}
       </div>
-      <div className="col-sm-12 beforeFooter"></div>
+      <div className="col-xs-12 hidden-xs beforeFooter"></div>
       <Footer />
       </div>
     )
@@ -97,7 +97,7 @@ const NewsArticle = React.createClass({
 
     return (
       <div
-        className="col-sm-12 newsPageList"
+        className="col-xs-12 noPadding newsPageList"
         style={{
           marginBottom: 120,
           paddingBottom: 80,
@@ -105,7 +105,7 @@ const NewsArticle = React.createClass({
       >
         <Link to={{ pathname: '/newsPage' , query:{id:this.props.id } }} >
 
-          <div className = "col-sm-12 newsBanner"
+          <div className = "col-xs-12 newsBanner noPadding"
               style={{
                 height:260,
                 background : 'url(' + newsBanner + ') no-repeat center center',
@@ -118,7 +118,7 @@ const NewsArticle = React.createClass({
         </Link>
         <Link to={{ pathname: '/newsPage' , query:{id:this.props.id } }} >
           <div
-            className="col-sm-3 newsTitleBox"
+            className="col-md-3 hidden-xs hidden-sm newsTitleBox"
             style={{
               height:160,
             }}
@@ -130,32 +130,47 @@ const NewsArticle = React.createClass({
               {this.props.date}
             </div>
           </div>
+
+          <div
+            className="col-xs-12 hidden-md hidden-lg hidden-xl newsTitleBoxSmall"
+            style={{
+              height:160,
+            }}
+          >
+            <div className="newsTitle">
+              {this.props.title}
+            </div>
+            <div className="newsDate">
+              {this.props.date}
+            </div>
+          </div>
+
         </Link>
 
 
       <div
-        className="col-sm-8 newsArticleBox"
+        className="col-xs-12 col-md-8 newsArticleBox"
         style={{
         }}
       >
         {this.props.article}
       </div>
 
-      <div className="shareNews col-sm-offset-3 col-sm-3">
+      <div className="shareNews col-xs-offset-1 col-xs-5 col-sm-offset-3 col-sm-3">
         <div
           style={{
             marginLeft: 18,
             marginTop:32,
           }}>
               <div className="shareButton">
-                <FacebookShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                <FacebookShareButton url="http://104.131.167.44/#/newsPage?id=1" title={this.props.title}>
                   <FacebookIcon size={32} round={true} />
                 </FacebookShareButton>
               </div>
 
 
               <div className="shareButton">
-                <TwitterShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                <TwitterShareButton url="http://104.131.167.44/#/newsPage?id=1" title={this.props.title}>
                   <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
               </div>
@@ -163,7 +178,7 @@ const NewsArticle = React.createClass({
       </div>
 
       <div
-        className="col-sm-offset-4 col-sm-1 "
+        className="col-xs-offset-4 col-xs-1 "
         style={{
           height: 60,
         }}

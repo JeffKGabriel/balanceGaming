@@ -40,39 +40,27 @@ const AllTeams = React.createClass({
         <div className="col-sm-12 col-sm-offset-0 rosterGalleryBox">
           <div className="rosterGallery">
             <ul>
-              {window.innerWidth >= 1200 ?
-                <li className="rosterGalleryPic" style={{opacity:0.5}}><img src={rosterSoonDark} /> </li>
-                : null
-              }
-              <li className="rosterGalleryPic"
-                style={{
-                  opacity:0.5
-                }}
-              >
-                  <img src={rosterSoonLight} />
-              </li>
+
+              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.5}}><img src={rosterSoonDark} /> </li>
+
+              <li className="rosterGalleryPic hidden-xs" style={{opacity:0.5}}><img src={rosterSoonLight} /></li>
+
               <li id="meleeRosterPic" className="rosterGalleryPic">
                 <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Melee" } }} >
                   <img src={rosterMelee} />
                 </Link>
               </li>
-              <li className="rosterGalleryPic"
-                style={{
-                  opacity:0.5
-                }}
-              >
-                  <img src={rosterSoonLight} />
-              </li>
-              {window.innerWidth >= 1200 ?
-                <li className="rosterGalleryPic" style={{opacity:0.5}}><img src={rosterSoonDark} /> </li>
-                : null
-              }
+
+              <li className="rosterGalleryPic hidden-xs" style={{opacity:0.5}}><img src={rosterSoonLight} /></li>
+
+              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.5}}><img src={rosterSoonDark} /> </li>
+
             </ul>
           </div>
         </div>
 
 
-        <div className="col-sm-12 beforeFooter"></div>
+        <div className="col-sm-12 hidden-xs beforeFooter"></div>
         <Footer />
       </div>
     )

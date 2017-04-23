@@ -62,7 +62,7 @@ const PlayerProfile = React.createClass({
           {player}
         </div>
 
-        <div className="col-sm-12 beforeFooter"
+        <div className="col-sm-12 hidden-xs beforeFooter"
           style={{
             marginBottom:100,
           }}

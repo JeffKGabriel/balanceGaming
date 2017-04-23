@@ -10,7 +10,7 @@ var bgTiledSmallLight = require('../imgs/BG_600_Lighter.png')
 const Background = (props) => (
       <div>
         <div
-          className="col-sm-12 homeBackground"
+          className="col-xs-12 homeBackground"
           style={{
             height:1300,
           //  background : 'url(' + 'https://cdn.wallpaperdirect.com/shared-assets/images/products/120170orig.jpg' + ') repeat ',

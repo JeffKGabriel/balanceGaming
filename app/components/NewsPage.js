@@ -72,7 +72,7 @@ const NewsPage = React.createClass({
             {chosenArticle}
           </div>
 
-          <div className="shareNews col-sm-offset-1 col-sm-5">
+          <div className="shareNews col-xs-offset-4 col-xs-5 col-sm-offset-1 col-sm-5">
             <div
               style={{
                 marginLeft: 0,
@@ -80,14 +80,14 @@ const NewsPage = React.createClass({
               }}>
 
               <div className="shareButton">
-                <FacebookShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                <FacebookShareButton url="http://104.131.167.44/#/newsPage?id=1" title={chosenTitle}>
                   <FacebookIcon size={32} round={true} />
                 </FacebookShareButton>
               </div>
 
 
               <div className="shareButton">
-                <TwitterShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                <TwitterShareButton url="http://104.131.167.44/#/newsPage?id=1" title={chosenTitle}>
                   <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
               </div>

@@ -28,11 +28,11 @@ const HomeRosterPanel = React.createClass({
           </div>
         </Link>
         <div className="homeRosterPlayerInfo">
-          <div className="homeRosterPlayerName col-sm-12">
+          <div className="homeRosterPlayerName col-xs-12">
             {this.props.info.name}
           </div>
-          <div className="homeRosterPlayerAge col-sm-12">
-            <div className="col-sm-6"
+          <div className="homeRosterPlayerAge col-xs-12">
+            <div className="col-xs-6"
                 style={{
                   textAlign:'right',
                   padding: 0,
@@ -41,7 +41,7 @@ const HomeRosterPanel = React.createClass({
             >
               Age
             </div>
-            <div className="col-sm-6"
+            <div className="col-xs-6"
                 style={{
                   textAlign:'left',
                   padding: 0,
@@ -52,7 +52,7 @@ const HomeRosterPanel = React.createClass({
 
           </div>
           <div className="homeRosterPlayerCountry">
-          <div className="col-sm-6"
+          <div className="col-xs-6"
               style={{
                 textAlign:'right',
                 padding: 0,
@@ -61,7 +61,7 @@ const HomeRosterPanel = React.createClass({
           >
             Country
           </div>
-          <div className="col-sm-6"
+          <div className="col-xs-6"
               style={{
                 textAlign:'left',
                 padding: 0,

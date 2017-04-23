@@ -29,7 +29,7 @@ var HomeNewsHeader = (props) => {
     <div className="homeNewsHeader" style={{ textAlign: 'center'}}>
 
       <div
-        className="col-sm-12 col-md-6"
+        className=" col-xs-12 col-sm-12 col-md-6"
         style={{
           paddingLeft:0,
           paddingRight:0,
@@ -37,7 +37,7 @@ var HomeNewsHeader = (props) => {
       >
       <Link to={{ pathname: '/NewsPage' , state: { scrollToTop: true } , query:{id:topNews.id } }} >
         <div
-          className="col-md-12 col-md-offset-0 col-sm-offset-3 col-sm-6 homeNewsPic"
+          className="col-md-12 col-md-offset-0 col-sm-offset-2 col-sm-8 homeNewsPic"
           style={{
             zIndex:2,
             background : 'url(' + boxPic + ') no-repeat center center',
@@ -65,7 +65,7 @@ var HomeNewsHeader = (props) => {
       </div>
 
       <div
-        className="col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 homeNewsArticleBox">
+        className="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 homeNewsArticleBox">
 
         <div
           className="homeNewsArticle col-sm-12"

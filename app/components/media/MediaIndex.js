@@ -214,7 +214,7 @@ const MediaIndex = React.createClass({
             </Slider>
           </div>
 
-          <div className="mediaGalleryBox col-sm-offset-1 col-sm-10"
+          <div className="mediaGalleryBox col-sm-offset-1 col-sm-10 noPadding"
            style={{
              marginTop: 80,
            }}

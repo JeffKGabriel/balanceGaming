@@ -4,7 +4,7 @@ html{
 
 body{
   height:100%;
-  min-width:600px;
+  /* min-width:600px; */
   /* background-color: #1f1f1f; */
   background-color: #FAFAFA;
 }
@@ -41,6 +41,14 @@ body{
 }
 .footerLeftLinks div:hover{
   color: #75B5FC;
+}
+
+.footerLeftLinksSmall{
+  height:90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .footerRightLinks{
@@ -95,6 +103,24 @@ body{
   color: #75B5FC;
 }
 
+.MenuULSmall{
+  padding-left: 10px; padding-right: 10px;
+  list-style-type: none;
+  height: 100%;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color:#555;
+}
+.menuULSmall a:hover{
+  color: #75B5FC;
+}
+
+
+
 .headerMenu{
   max-width:450px;
   float:right;
@@ -120,6 +146,17 @@ body{
   color: inherit;
   cursor: pointer;
 }
+
+.MenuULSmall li{
+}
+
+.MenuULSmall a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+
 
 .homeBanner{
     height: 100vh;
@@ -213,12 +250,16 @@ body{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
+  overflow: visible;
 }
 
 .homeRosterPanel{
   min-width:200;
+  max-width:200;
+  margin: 20px;
+
   height:430;
-  margin-left: 16px;
   margin-bottom: 50px;
 }
 
@@ -311,9 +352,9 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding-right: 0px;
-  margin-left: -80;
-  margin-right: 20px;
+  left:0;
+  top:0;
+  position: absolute;
 
 }
 
@@ -410,22 +451,23 @@ border-right: 1px solid #CCC;
   padding-top: 10px;
   font-family: 'Raleway', sans-serif;
   padding-right: 30px;
+  text-align: right;
+}
+.newsTitleBoxSmall{
+  padding-top: 10px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
 }
 
 .newsTitle{
-  text-align: right;
   font-size: 36;
   text-decoration: none;
   color:#333;
 
 }
-
-
 .newsDate{
-  text-align: right;
   font-size: 18;
   color:#555;
-
 }
 
 .newsArticleBox{
@@ -613,6 +655,7 @@ border-right: 1px solid #CCC;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
 }
 
 .homeNewsListEntry{
@@ -635,7 +678,7 @@ border-right: 1px solid #CCC;
 
 .homeNewsListTitle{
   color:#fff;
-  font-size: 32px;
+  font-size: 28px;
   font-family: 'Raleway', sans-serif;
   font-weight: 900;
   text-align: right;
@@ -770,6 +813,7 @@ border-right: 1px solid #CCC;
   align-items: center;
   justify-content: center;
   font-family: 'Roboto Slab', serif;
+  text-align: center;
 }
 
 .newsLetterForm p{
@@ -819,7 +863,9 @@ border-right: 1px solid #CCC;
 
 .partnersHomePanel{
   cursor:pointer;
+  margin:10px;
 }
+
 
 .partnerBox{
   display:flex;

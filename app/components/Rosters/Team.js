@@ -37,7 +37,7 @@ const Team = React.createClass({
 
         {rosters}
 
-        <div className="col-sm-12 beforeFooter">
+        <div className="col-sm-12 hidden-xs beforeFooter">
         </div>
         <Footer />
       </div>

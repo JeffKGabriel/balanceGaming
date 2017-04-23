@@ -13,7 +13,7 @@ const Partners = React.createClass({
   render: function(){
 
     return(
-      <div className="col-sm-12">
+      <div className="col-sm-12 contentPage">
       <Background />
 
       <div style={{
@@ -22,7 +22,7 @@ const Partners = React.createClass({
       >
       </div>
 
-        <div className="col-md-offset-1 col-md-10 col-xs-12">
+        <div className="col-md-offset-1 col-md-10 col-xs-12 noPadding">
           <div className="col-xs-12 partnerBox">
             <PartnerBox />
             <PartnerBox />
@@ -33,7 +33,7 @@ const Partners = React.createClass({
         </div>
 
 
-        <div className="col-sm-12 beforeFooter"></div>
+        <div className="col-xs-12 hidden-xs beforeFooter"></div>
         <Footer />
       </div>
     )
@@ -45,7 +45,7 @@ const PartnerBox = React.createClass({
   render: function(){
 
     return(
-      <div className="col-xs-4 partnerPanel"
+      <div className="col-xs-12 col-md-4 partnerPanel"
         style={{
           padding:10,
         }}

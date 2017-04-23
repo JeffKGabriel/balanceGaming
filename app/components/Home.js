@@ -69,18 +69,14 @@ const Home = React.createClass({
 
 
         <div
-          className="col-md-offset-1 col-md-10 col-sm-12"
+          className="col-md-offset-1 col-md-10 col-xs-12 noPadding"
           style={{
             marginTop: 100,
           }}
         >
 
           <div
-            className="col-md-9 col-sm-12"
-            style={{
-              padding: 15,
-            }}
-          >
+            className="col-md-9 col-xs-12 noPadding">
             <div >
             <ScrollElement name="myScrollToElement"></ScrollElement>
             <HomeNewsHeader news={this.props.children.passState.news}></HomeNewsHeader>
@@ -90,12 +86,7 @@ const Home = React.createClass({
           </div>
 
           <div
-            className="col-md-3 col-sm-12"
-            style={{
-              //backgroundColor: '#880',
-              padding: 15,
-            }}
-          >
+            className="col-md-3 col-xs-12 noPadding">
             <div
               className="homeNewsList"
               style={{
@@ -112,23 +103,26 @@ const Home = React.createClass({
 
         </div>
 
+        <div className="col-xs-12 hidden-xs"
+            style={{
+              height:110
+            }}>
+        </div>
 
 
 
         <div
           id="homeRoster"
-          className="col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-12 homeRoster"
+          className="col-md-offset-1 col-md-10 col-xs-12 homeRoster noPadding"
           style={{
             //backgroundColor: '#555555',
-            marginTop: 180,
-            marginBottom:80,
+            marginTop: 30,
           }}
         >
           <div
-            className="col-sm-12"
+            className="col-xs-12 noPadding"
             style={{
               //backgroundColor: '#880',
-              padding: 15,
             }}
           >
             <HomeHeader>Rosters</HomeHeader>
@@ -139,21 +133,26 @@ const Home = React.createClass({
         </div>
 
 
+        <div className="col-xs-12 hidden-xs"
+            style={{
+              height:60
+            }}>
+        </div>
+
 
         <div
-          className="col-md-offset-1 col-md-5 col-sm-6 col-sm-offset-0 homePartners"
+          className="col-md-offset-1 col-md-5 col-sm-6 col-xs-offset-0 col-xs-12 noPadding homePartners"
           style={{
             //backgroundColor: '#555555',
-            marginTop: 100,
+            marginTop: 40,
           }}
         >
           <HomeHeader>Partners</HomeHeader>
 
           <div
-            className="col-sm-12"
+            className="col-xs-12 noPadding"
             style={{
               //backgroundColor: '#880',
-              padding: 15,
             }}
           >
             <div style={{
@@ -205,16 +204,16 @@ const Home = React.createClass({
         </div>
 
         <div
-          className="col-md-5 col-sm-6 homeNewsLetter"
+          className="col-md-5 col-sm-6 col-xs-12  homeNewsLetter"
           style={{
             //backgroundColor: '#555555',
-            marginTop: 100,
+            marginTop: 40,
           }}
         >
           <HomeHeader>NewsLetter</HomeHeader>
 
           <div
-            className="col-sm-12"
+            className="col-xs-12"
             style={{
               //backgroundColor: '#880',
               padding: 15,
@@ -263,7 +262,7 @@ const Home = React.createClass({
           </div>
         </div>
 
-        <div className="col-sm-12 beforeFooter"></div>
+        <div className="col-xs-12 hidden-xs beforeFooter"></div>
         <Footer />
 
       </div> //end of Home

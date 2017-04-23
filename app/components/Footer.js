@@ -40,32 +40,94 @@ const Footer = React.createClass({
 
     return(
       <div className="col-xs-12 footer navbar-fixed-bottom">
-        <div className="col-xs-12 col-md-10 col-md-offset-1">
 
-          <div className="col-xs-4 footerLeftLinks">
-            <div>
-              About
-            </div>
-            <div>
-              Contact
-            </div>
-            <div>
-              Careers
-            </div>
-            <div>
-              Cookie Policy
-            </div>
+        <div className="col-xs-12 col-md-10 col-md-offset-1 noPadding">
+
+          <div className="col-xs-4 footerLeftLinks hidden-xs">
+            <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
+              <div>
+                About
+              </div>
+            </Link>
+
+            <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
+              <div>
+                Contact
+              </div>
+            </Link>
+
+            <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
+              <div>
+                Careers
+              </div>
+            </Link>
+
           </div>
 
-          <div className="col-xs-4 col-xs-offset-2 col-xs-5 col-md-offet-3 col-md-5 footerRightLinks">
+          <div className="col-xs-4 footerLeftLinksSmall noPadding hidden-sm hidden-md hidden-lg hidden-xl">
+            <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
+              <div>
+                About
+              </div>
+            </Link>
 
-            <div className="fa fa-twitter footerIcon" aria-hidden="true">
-            </div>
+            <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
+              <div>
+                Contact
+              </div>
+            </Link>
 
-            <div className="fa fa-facebook-square footerIcon" aria-hidden="true">
-            </div>
+            <Link to={{ pathname:'/About', state: { scrollToTop: true } }}>
+              <div>
+                Careers
+              </div>
+            </Link>
 
-            <div className="tradeMark">
+          </div>
+
+          <div className="col-xs-4 hidden-md hidden-lg hidden-xl"
+            style={{
+              height:90,
+              display:'flex',
+              alignItems:'center',
+              justifyContent:'center',
+            }}>
+            <a href="https://twitter.com/esportsbalance">
+              <div className="fa fa-twitter footerIcon" aria-hidden="true"
+                style={{
+                  margin:12,
+                }}>
+              </div>
+            </a>
+
+            <a href="https://www.facebook.com/BalanceGaming/">
+              <div className="fa fa-facebook-square footerIcon" aria-hidden="true"
+                style={{
+                  margin:12,
+                }}>
+              </div>
+            </a>
+          </div>
+
+
+          <div className="col-xs-4 col-xs-offset-0 col-md-offset-3 col-md-5 footerRightLinks noPadding">
+
+          <div className="hidden-xs hidden-sm">
+            <a href="https://twitter.com/esportsbalance">
+              <div className="fa fa-twitter footerIcon" aria-hidden="true">
+              </div>
+            </a>
+
+            <a href="https://www.facebook.com/BalanceGaming/">
+              <div className="fa fa-facebook-square footerIcon" aria-hidden="true">
+              </div>
+            </a>
+          </div>
+
+            <div className="tradeMark"
+              style={{
+                cursor: 'default',
+              }}>
               © 2017  Balance Gaming
             </div>
 

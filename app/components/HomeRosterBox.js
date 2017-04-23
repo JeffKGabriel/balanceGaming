@@ -46,31 +46,33 @@ const HomeRosterBox = React.createClass({
   return(
 
     <div
-      className="col-sm-12"
+      className="col-xs-12 noPadding"
       style={{
         display: 'flex',
         justifyContent: 'center',
       }}
     >
 
-      <div className="homeRosterTeamSelect">
 
-        <div className="homeRosterThumb"
-          style={{
-            background : 'url(' + smashLogo + ') no-repeat center center',
-            backgroundSize : '80px 80px',
-          }}
-        >
+
+      <div className="rosterPanelBox col-xs-12 col-sm-9 col-lg-8 col-xl-6">
+
+        <div className="homeRosterTeamSelect hidden">
+
+          <div className="homeRosterThumb"
+            style={{
+              background : 'url(' + smashLogo + ') no-repeat center center',
+              backgroundSize : '80px 80px',
+            }}
+          >
+          </div>
+
         </div>
 
-      </div>
+          <HomeRosterPanel info={rosterInfoArteezy} />
 
-      <div className=" rosterPanelBox">
+          <HomeRosterPanel info={rosterInfoIsai} />
 
-
-        <HomeRosterPanel info={rosterInfoArteezy} />
-
-        <HomeRosterPanel info={rosterInfoIsai} />
 
       </div>
 

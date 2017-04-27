@@ -5,7 +5,6 @@ import HomeNewsHeader from './HomeNewsHeader.js'
 import HomeNewsListEntry from './HomeNewsListEntry.js'
 import HomeRosterBox from './HomeRosterBox.js'
 
-import myHistory from './myHistory.js'
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
@@ -21,7 +20,7 @@ var ScrollSpy        = Scroll.scrollSpy;
 var Scroller         = Scroll.scroller;
 
 
-var homeBannerPic = require('../imgs/Home/MainPage.png');
+var homeBannerPic = require('../imgs/Home/MainPage.png'); //require('../imgs/Home/MainPage.png');
 
 
 
@@ -50,6 +49,76 @@ const Home = React.createClass({
       )
     });
 
+    console.log("newsList length" , newsList.length)
+
+    /*
+
+    <div
+      id="homeRoster"
+      className="col-md-offset-1 col-md-10 col-xs-12 homeRoster noPadding"
+      style={{
+        //backgroundColor: '#555555',
+        marginTop: 30,
+      }}
+    >
+      <div
+        className="col-xs-12 noPadding"
+        style={{
+          //backgroundColor: '#880',
+        }}
+      >
+        <HomeHeader>Rosters</HomeHeader>
+
+        <HomeRosterBox></HomeRosterBox>
+
+      </div>
+    </div>
+
+
+    */
+
+
+
+    /*
+
+    <div className="partnersHomePanel" style={{
+      height:200,
+      width:200,
+      backgroundColor: '#424',
+    }}>
+      <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+    </div>
+    <div className="partnersHomePanel" style={{
+      height:200,
+      width:200,
+      backgroundColor: '#f24',
+    }}>
+      <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+    </div>
+    <div className="partnersHomePanel" style={{
+      height:200,
+      width:200,
+      backgroundColor: '#238',
+    }}>
+      <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+    </div>
+    <div className="partnersHomePanel" style={{
+      height:200,
+      width:200,
+      backgroundColor: '#a42',
+    }}>
+      <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+    </div>
+    <div className="partnersHomePanel" style={{
+      height:200,
+      width:200,
+      backgroundColor: '#32b',
+    }}>
+      <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
+    </div>
+
+    */
+
 
     return(
       <div className="contentPage">
@@ -76,7 +145,7 @@ const Home = React.createClass({
         >
 
           <div
-            className="col-md-9 col-xs-12 noPadding">
+            className="col-md-12 col-xs-12 noPadding">
             <div >
             <ScrollElement name="myScrollToElement"></ScrollElement>
             <HomeNewsHeader news={this.props.children.passState.news}></HomeNewsHeader>
@@ -85,20 +154,27 @@ const Home = React.createClass({
             </div>
           </div>
 
-          <div
-            className="col-md-3 col-xs-12 noPadding">
+          { newsList.length === 0
+            ? null
+            :
+
             <div
-              className="homeNewsList"
-              style={{
-                height:450,
-              }}>
+              className="col-md-3 col-xs-12 noPadding">
+              <div
+                className="homeNewsList"
+                style={{
+                  height:450,
+                }}>
 
 
-                {newsList}
+                  {newsList}
 
 
+              </div>
             </div>
-          </div>
+          }
+
+
 
 
         </div>
@@ -111,26 +187,9 @@ const Home = React.createClass({
 
 
 
-        <div
-          id="homeRoster"
-          className="col-md-offset-1 col-md-10 col-xs-12 homeRoster noPadding"
-          style={{
-            //backgroundColor: '#555555',
-            marginTop: 30,
-          }}
-        >
-          <div
-            className="col-xs-12 noPadding"
-            style={{
-              //backgroundColor: '#880',
-            }}
-          >
-            <HomeHeader>Rosters</HomeHeader>
 
-            <HomeRosterBox></HomeRosterBox>
 
-          </div>
-        </div>
+
 
 
         <div className="col-xs-12 hidden-xs"
@@ -160,41 +219,8 @@ const Home = React.createClass({
 
               <div className="partnersBox">
 
-                <div className="partnersHomePanel" style={{
-                  height:200,
-                  width:200,
-                  backgroundColor: '#424',
-                }}>
-                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
-                </div>
-                <div className="partnersHomePanel" style={{
-                  height:200,
-                  width:200,
-                  backgroundColor: '#f24',
-                }}>
-                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
-                </div>
-                <div className="partnersHomePanel" style={{
-                  height:200,
-                  width:200,
-                  backgroundColor: '#238',
-                }}>
-                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
-                </div>
-                <div className="partnersHomePanel" style={{
-                  height:200,
-                  width:200,
-                  backgroundColor: '#a42',
-                }}>
-                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
-                </div>
-                <div className="partnersHomePanel" style={{
-                  height:200,
-                  width:200,
-                  backgroundColor: '#32b',
-                }}>
-                  <img src="https://cdn1.iconfinder.com/data/icons/simple-icons/512/twitch-512-black.png" height="200" width="200" />
-                </div>
+
+
 
               </div>
 

@@ -3,6 +3,9 @@ var React = require('react');
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
+import Linkify from 'react-linkify'
+
+
 import Background from './Background.js'
 
 import Footer from './Footer.js'
@@ -40,6 +43,15 @@ const NewsPage = React.createClass({
 
     var newsBanner = require('../imgs/'+banner)
 
+    const paragraphs = chosenArticle.map((a,k)=>{
+      return(
+        <ArticleParagraph
+         key = {k}
+         paragraph = {a}
+        />
+      )
+    })
+
 
     return(
       <div className="col-sm-12 contentPage">
@@ -69,7 +81,7 @@ const NewsPage = React.createClass({
           </div>
 
           <div className="newsPageArticle col-sm-offset-1 col-sm-10">
-            {chosenArticle}
+            {paragraphs}
           </div>
 
           <div className="shareNews col-xs-offset-4 col-xs-5 col-sm-offset-1 col-sm-5">
@@ -104,6 +116,25 @@ const NewsPage = React.createClass({
   },
 
 });
+
+
+const ArticleParagraph = React.createClass({
+
+  render: function(){
+
+
+    return(
+      <div style={{paddingBottom:12}}>
+        <Linkify>
+          {this.props.paragraph}
+        </Linkify>
+      </div>
+    )
+  }
+
+})
+
+
 
 export default NewsPage
 

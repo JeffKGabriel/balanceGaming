@@ -27,10 +27,72 @@ const PlayerProfile = React.createClass({
   },
 
 
+  /*
+
+  <div className=" col-sm-offset-1 col-sm-10 profileBio"
+    style={{
+      marginTop:50,
+    }}
+  >
+    <HomeHeader fontSize="38" >
+     Titles
+    </HomeHeader>
+
+    <div className="col-sm-12 profileTitlesInput">
+      <div className="col-sm-2 profileTitlesTrophy">
+      </div>
+      <div className="col-sm-8 profileTitlesEvent">
+        Apex Melee Singles
+      </div>
+      <div className="col-sm-2 profileTitlesYear">
+        2011
+      </div>
+    </div>
+
+    <div className="col-sm-12 profileTitlesInput">
+      <div className="col-sm-2 profileTitlesTrophy">
+      </div>
+      <div className="col-sm-8 profileTitlesEvent">
+        Apex Melee Singles
+      </div>
+      <div className="col-sm-2 profileTitlesYear">
+        2011
+      </div>
+    </div>
+
+    <div className="col-sm-12 profileTitlesInput">
+      <div className="col-sm-2 profileTitlesTrophy">
+      </div>
+      <div className="col-sm-8 profileTitlesEvent">
+        Apex Melee Singles
+      </div>
+      <div className="col-sm-2 profileTitlesYear">
+        2011
+      </div>
+    </div>
+
+    <div className="col-sm-12 profileTitlesInput">
+      <div className="col-sm-2 profileTitlesTrophy">
+      </div>
+      <div className="col-sm-8 profileTitlesEvent">
+        Apex Melee Singles
+      </div>
+      <div className="col-sm-2 profileTitlesYear">
+        2011
+      </div>
+    </div>
+
+
+  </div>
+
+
+  */
+
+
   render: function(){
 
 
-    var newsBanner = require('../../imgs/lightBanner1.png')
+    var newsBanner = require('../../imgs/Intro_widebanner.jpg')
 
     const rightPlayer = this.props.children.passState.rosters.filter(m=> m.id==this.props.location.query.id );
     const player = rightPlayer.map((a,k)=> {
@@ -38,10 +100,13 @@ const PlayerProfile = React.createClass({
       return(
         <Player
           name={a.name}
+          fullName={a.fullName}
           country={a.country}
           bio={a.bio}
           age={a.age}
           pic={a.pic}
+          twitter={a.twitter}
+          twitch={a.twitch}
           key={k}
         />
       )
@@ -88,8 +153,8 @@ const RosterBanner = (props)=>(
 
 const Player = (props) =>(
   <div>
-    <PlayerPic pic={props.pic} />
-    <PlayerInfo name={props.name} age={props.age} country={props.country} bio={props.bio}  />
+    <PlayerPic pic={props.pic} twitch={props.twitch} twitter={props.twitter} />
+    <PlayerInfo name={props.name} age={props.age} country={props.country} bio={props.bio} fullName={props.fullName}  />
   </div>
 )
 
@@ -105,26 +170,24 @@ const PlayerPic = (props) =>{
 
       <div className="profileSocial">
 
-        <div className="fa fa-twitter partnerLinkIcon" aria-hidden="true">
-        </div>
+        <a href={props.twitter}>
+          <div className="fa fa-twitter partnerLinkIcon" aria-hidden="true">
+          </div>
+        </a>
 
-        <div className="fa fa-facebook-square partnerLinkIcon" aria-hidden="true"
-         style={{
-           marginLeft:32,
-         }}
-        >
-        </div>
-        <div className="fa fa-globe partnerLinkIcon" aria-hidden="true"
-          style={{
-            marginLeft:30,
-          }}
-        >
-        </div>
+        <a href={props.twitch}>
+          <div className="fa fa-facebook-square partnerLinkIcon" aria-hidden="true"
+           style={{
+             marginLeft:32,
+           }}
+          >
+          </div>
+        </a>
 
       </div>
 
       <div id="twitterEmbed" className="embedTwitterProfile myFade">
-        <a className="twitter-timeline" data-width="280" data-height="500" href="https://twitter.com/TwitterDev"></a>
+        <a className="twitter-timeline" data-width="280" data-height="500" href={props.twitter}></a>
           <script async src="//platform.twitter.com/widgets.js" charset="utf-8">
           </script>
       </div>
@@ -144,7 +207,7 @@ const PlayerInfo = (props) => {
         <div className="col-sm-11">
 
           <div className="col-sm-12 profileTitle">
-            {props.name}
+            {props.fullName}
           </div>
           <div className="col-sm-12 profileInfo">
             {props.age} | {props.country}
@@ -161,61 +224,10 @@ const PlayerInfo = (props) => {
       <div className=" col-sm-offset-1 col-sm-10 profileBio">
         {props.bio}
       </div>
-      <div className=" col-sm-offset-1 col-sm-10 profileBio"
-        style={{
-          marginTop:50,
-        }}
-      >
-        <HomeHeader fontSize="38" >
-         Titles
-        </HomeHeader>
-
-        <div className="col-sm-12 profileTitlesInput">
-          <div className="col-sm-2 profileTitlesTrophy">
-          </div>
-          <div className="col-sm-8 profileTitlesEvent">
-            Apex Melee Singles
-          </div>
-          <div className="col-sm-2 profileTitlesYear">
-            2011
-          </div>
-        </div>
-
-        <div className="col-sm-12 profileTitlesInput">
-          <div className="col-sm-2 profileTitlesTrophy">
-          </div>
-          <div className="col-sm-8 profileTitlesEvent">
-            Apex Melee Singles
-          </div>
-          <div className="col-sm-2 profileTitlesYear">
-            2011
-          </div>
-        </div>
-
-        <div className="col-sm-12 profileTitlesInput">
-          <div className="col-sm-2 profileTitlesTrophy">
-          </div>
-          <div className="col-sm-8 profileTitlesEvent">
-            Apex Melee Singles
-          </div>
-          <div className="col-sm-2 profileTitlesYear">
-            2011
-          </div>
-        </div>
-
-        <div className="col-sm-12 profileTitlesInput">
-          <div className="col-sm-2 profileTitlesTrophy">
-          </div>
-          <div className="col-sm-8 profileTitlesEvent">
-            Apex Melee Singles
-          </div>
-          <div className="col-sm-2 profileTitlesYear">
-            2011
-          </div>
-        </div>
 
 
-      </div>
+
+
 
 
     </div>

@@ -59,7 +59,7 @@ const HomeRosterPanel = React.createClass({
                 paddingRight:4,
               }}
           >
-            Country
+            Role
           </div>
           <div className="col-xs-6"
               style={{
@@ -67,25 +67,26 @@ const HomeRosterPanel = React.createClass({
                 padding: 0,
               }}
           >
-            : {this.props.info.country}
+            : {this.props.info.role}
           </div>
           </div>
         </div>
 
         <div className="playerSocial">
-          <div className="playerSocialIcon">
-            <i className="fa fa-twitter" aria-hidden="true"></i>
-          </div>
-          <div className="playerSocialIcon">
-            <i className="fa fa-facebook-square" aria-hidden="true"></i>
-          </div>
-          <div className="playerSocialIcon"
-          style={{
-            marginTop:5,
-          }}
-          >
-            <i className="fa fa-twitch" aria-hidden="true"></i>
-          </div>
+          <a href={this.props.info.twitter}>
+            <div className="playerSocialIcon">
+              <i className="fa fa-twitter" aria-hidden="true"></i>
+            </div>
+          </a>
+          <a href={this.props.info.twitch}>
+            <div className="playerSocialIcon"
+            style={{
+              marginTop:5,
+            }}
+            >
+              <i className="fa fa-twitch" aria-hidden="true"></i>
+            </div>
+          </a>
         </div>
 
       </div>

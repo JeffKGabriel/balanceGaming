@@ -39,7 +39,9 @@ const HomeRosterBox = React.createClass({
       id:4 ,
     }
 
+//  <HomeRosterPanel info={rosterInfoArteezy} />
 
+//  <HomeRosterPanel info={rosterInfoIsai} />
 
 
 
@@ -69,9 +71,8 @@ const HomeRosterBox = React.createClass({
 
         </div>
 
-          <HomeRosterPanel info={rosterInfoArteezy} />
 
-          <HomeRosterPanel info={rosterInfoIsai} />
+
 
 
       </div>

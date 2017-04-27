@@ -59,6 +59,9 @@ const Team = React.createClass({
             age:a.age,
             name:a.name,
             country:a.country,
+            twitch : a.twitch,
+            twitter :a.twitter,
+            role : a.role,
             pic: require('../../imgs/'+a.pic)
           }
         return(
@@ -72,7 +75,7 @@ const Team = React.createClass({
             marginBottom:80,
           }}
         >
-          <HomeHeader logo="smashLogo2.jpg" >{this.props.gameName}</HomeHeader>
+          <HomeHeader logo="overwatchLogo.png" >{this.props.gameName}</HomeHeader>
           <div className="col-sm-12 rosterPanelBox">
             {players}
           </div>

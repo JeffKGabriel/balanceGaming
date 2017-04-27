@@ -2,6 +2,9 @@ var React = require('react');
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 
+import Linkify from 'react-linkify'
+
+
 import {
   ShareButtons,
   ShareCounts,
@@ -20,6 +23,15 @@ var HomeNewsHeader = (props) => {
 
 
   var topNews = props.news[0];
+
+  const paragraphs = topNews.article.map((a,k)=>{
+    return(
+      <ArticleParagraph
+       key = {k}
+       paragraph = {a}
+      />
+    )
+  })
 
 
   var boxPic = require('../imgs/'+topNews.boxPic);
@@ -70,7 +82,7 @@ var HomeNewsHeader = (props) => {
         <div
           className="homeNewsArticle col-sm-12"
         >
-        {topNews.article}
+        {paragraphs}
         </div>
 
         <div
@@ -79,13 +91,13 @@ var HomeNewsHeader = (props) => {
             <div className="homeNewsReadMoreSocial">
 
               <div className="shareButton">
-                <FacebookShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                <FacebookShareButton url="http://balance-gaming.com/#/newsPage?id=1" title={topNews.title}>
                   <FacebookIcon size={30} round={true} />
                 </FacebookShareButton>
               </div>
 
               <div className="shareButton">
-                <TwitterShareButton url="http://104.131.167.44/#/newsPage?id=1" title="asdasd">
+                <TwitterShareButton url="http://balance-gaming.com/#/newsPage?id=1" title={topNews.title}>
                   <TwitterIcon size={30} round={true} />
                 </TwitterShareButton>
               </div>
@@ -110,5 +122,24 @@ var HomeNewsHeader = (props) => {
   )
 
 }
+
+
+
+const ArticleParagraph = React.createClass({
+
+  render: function(){
+
+
+    return(
+      <div style={{paddingBottom:12}}>
+        <Linkify>
+          {this.props.paragraph}
+        </Linkify>
+      </div>
+    )
+  }
+
+})
+
 
 export default HomeNewsHeader

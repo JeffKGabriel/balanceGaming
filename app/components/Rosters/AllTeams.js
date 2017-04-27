@@ -21,10 +21,24 @@ var rosterSoonDark= require('../../imgs/RosterGames/Games_Soon_Dark.jpg');
 var rosterSoonLight= require('../../imgs/RosterGames/Games_Soon_Light.jpg');
 
 
+var OWLight = require('../../imgs/RosterGames/OW_light.png');
+var SmashSoon = require('../../imgs/RosterGames/Smash_soon.jpg');
+
+var ComingSoon = require('../../imgs/RosterGames/Coming_soon.jpg');
+
+
+
+
 
 
 const AllTeams = React.createClass({
 
+
+/*
+<Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Melee" } }} >
+  <img src={rosterMelee} />
+</Link>
+*/
 
 
 
@@ -41,19 +55,20 @@ const AllTeams = React.createClass({
           <div className="rosterGallery">
             <ul>
 
-              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.5}}><img src={rosterSoonDark} /> </li>
+              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.7}}><img src={ComingSoon} /> </li>
 
-              <li className="rosterGalleryPic hidden-xs" style={{opacity:0.5}}><img src={rosterSoonLight} /></li>
+              <li className="rosterGalleryPic hidden-xs" style={{opacity:0.7}}><img src={ComingSoon} /></li>
+
 
               <li id="meleeRosterPic" className="rosterGalleryPic">
-                <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Melee" } }} >
-                  <img src={rosterMelee} />
-                </Link>
+                  <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Overwatch" } }} >
+                    <img src={OWLight} />
+                  </Link>
               </li>
 
-              <li className="rosterGalleryPic hidden-xs" style={{opacity:0.5}}><img src={rosterSoonLight} /></li>
+              <li className="rosterGalleryPic hidden-xs" style={{opacity:0.7}}><img src={SmashSoon} /></li>
 
-              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.5}}><img src={rosterSoonDark} /> </li>
+              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.7}}><img src={ComingSoon} /> </li>
 
             </ul>
           </div>

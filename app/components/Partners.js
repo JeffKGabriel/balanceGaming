@@ -10,6 +10,14 @@ import Footer from './Footer.js'
 
 const Partners = React.createClass({
 
+  /*
+  <PartnerBox />
+  <PartnerBox />
+  <PartnerBox />
+  <PartnerBox />
+  <PartnerBox />
+  */
+
   render: function(){
 
     return(
@@ -24,11 +32,7 @@ const Partners = React.createClass({
 
         <div className="col-md-offset-1 col-md-10 col-xs-12 noPadding">
           <div className="col-xs-12 partnerBox">
-            <PartnerBox />
-            <PartnerBox />
-            <PartnerBox />
-            <PartnerBox />
-            <PartnerBox />
+
           </div>
         </div>
 

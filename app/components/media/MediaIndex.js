@@ -1,6 +1,7 @@
 var React = require('react');
-var ReactRouter = require('react-router');
-var Link = ReactRouter.Link;
+
+//var ReactRouter = require('react-router');
+//var Link = ReactRouter.Link;
 
 var Slider = require('react-slick');
 import YouTube from 'react-youtube'
@@ -20,6 +21,18 @@ import Gallery from 'react-photo-gallery';
 
 
 const MediaIndex = React.createClass({
+
+  /*
+  {
+    src: 'http://lorempixel.com/400/200/',
+    width: 400,
+    height: 200,
+    aspectRatio: 2,
+    lightboxImage:{
+    src: 'http://lorempixel.com/400/200/',
+    }
+  },
+  */
 
   render: function(){
 
@@ -45,117 +58,8 @@ const MediaIndex = React.createClass({
     }
 
     const PHOTO_SET = [
-  {
-    src: 'http://lorempixel.com/400/200/',
-    width: 400,
-    height: 200,
-    aspectRatio: 2,
-    lightboxImage:{
-    src: 'http://lorempixel.com/400/200/',
-    }
-  },
-  {
-    src: 'http://lorempixel.com/600/600/',
-    width: 600,
-    height: 600,
-    aspectRatio: 1,
-    lightboxImage:{
-    src: 'http://lorempixel.com/600/600/',
-    }
-  },
-  {
-    src: 'http://lorempixel.com/600/300/',
-    width: 600,
-    height: 300,
-    aspectRatio: 2,
-    lightboxImage:{
-    src: 'http://lorempixel.com/600/300/',
-    }
-  },
-  {
-    src: 'http://lorempixel.com/400/400/',
-    width: 400,
-    height: 400,
-    aspectRatio: 1,
-    lightboxImage:{
-    src: 'http://lorempixel.com/400/400/',
-    }
-  },
-  {
-    src: 'http://lorempixel.com/200/300/',
-    width: 200,
-    height: 300,
-    aspectRatio: 0.666,
-    lightboxImage:{
-    src: 'http://lorempixel.com/200/300/',
-    }
-  },
-  {
-    src: 'http://lorempixel.com/400/200/',
-    width: 400,
-    height: 200,
-    aspectRatio: 2,
-    lightboxImage:{
-    src: 'http://lorempixel.com/400/200/',
-    }
-  },
-  {
-    src: 'http://lorempixel.com/200/400/',
-    width: 200,
-    height: 400,
-    aspectRatio: 0.5,
-    lightboxImage:{
-    src: 'http://lorempixel.com/200/400/',
-    }
-  },
 
-  {
-    src: 'http://lorempixel.com/400/300/',
-    width: 400,
-    height: 300,
-    aspectRatio: 1.333,
-    lightboxImage:{
-    src: 'http://lorempixel.com/400/300/',
-    }
-  },
-
-    {
-      src: 'http://lorempixel.com/300/300/',
-      width: 300,
-      height: 300,
-      aspectRatio: 1,
-      lightboxImage:{
-      src: 'http://lorempixel.com/300/300/',
-      }
-    },
-    {
-      src: 'http://lorempixel.com/400/200/',
-      width: 400,
-      height: 200,
-      aspectRatio: 2,
-      lightboxImage:{
-      src: 'http://lorempixel.com/400/200/',
-      }
-    },
-    {
-      src: 'http://lorempixel.com/600/600/',
-      width: 600,
-      height: 600,
-      aspectRatio: 1,
-      lightboxImage:{
-      src: 'http://lorempixel.com/600/600/',
-      }
-    },
-    {
-      src: 'http://lorempixel.com/600/300/',
-      width: 600,
-      height: 300,
-      aspectRatio: 2,
-      lightboxImage:{
-      src: 'http://lorempixel.com/600/300/',
-      }
-    },
-];
+    ];
 
     return(
       <div className="col-sm-12 contentPage">
@@ -179,38 +83,13 @@ const MediaIndex = React.createClass({
               <div>
                 <div className="sliderContent">
                   <YouTube
-                    videoId="MAWK5kNDDlM"
+                    videoId="G9UnwZ2HsXg"
                     opts={vidOpts}
                     onReady={this._onReady}
                   />
                 </div>
               </div>
 
-              <div>
-                <div className="sliderContent">
-                  <YouTube
-                    videoId="pS5peqApgUA"
-                    opts={vidOpts}
-                    onReady={this._onReady}
-                  />
-                </div>
-              </div>
-
-              <div>
-                <div className="sliderContent">
-                  <YouTube
-                    videoId="pS5peqApgUA"
-                    opts={vidOpts}
-                    onReady={this._onReady}
-                  />
-                </div>
-              </div>
-
-
-
-              <div><h3>4</h3></div>
-              <div><h3>5</h3></div>
-              <div><h3>6</h3></div>
             </Slider>
           </div>
 

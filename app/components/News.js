@@ -7,6 +7,8 @@ var Link = ReactRouter.Link;
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
+import Linkify from 'react-linkify'
+
 
 //var HomeHeader = require('./HomeHeader');
 import HomeHeader from './HomeHeader.js'
@@ -95,6 +97,15 @@ const NewsArticle = React.createClass({
 
     var newsBanner = require('../imgs/'+this.props.banner);
 
+    const paragraphs = this.props.article.map((a,k)=>{
+      return(
+        <ArticleParagraph
+         key = {k}
+         paragraph = {a}
+        />
+      )
+    })
+
     return (
       <div
         className="col-xs-12 noPadding newsPageList"
@@ -153,7 +164,7 @@ const NewsArticle = React.createClass({
         style={{
         }}
       >
-        {this.props.article}
+        {paragraphs}
       </div>
 
       <div className="shareNews col-xs-offset-1 col-xs-5 col-sm-offset-3 col-sm-3">
@@ -209,6 +220,25 @@ const NewsArticle = React.createClass({
     );
   },
 });
+
+
+
+const ArticleParagraph = React.createClass({
+
+  render: function(){
+
+
+    return(
+      <div style={{paddingBottom:12}}>
+        <Linkify>
+          {this.props.paragraph}
+        </Linkify>
+      </div>
+    )
+  }
+
+})
+
 
 /*
 

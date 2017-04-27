@@ -63,7 +63,8 @@ body{
 
 .footerIcon{
   font-size: 28;
-  margin-left: 24px;
+  margin-left: 16px;
+
 }
 
 .footerIcon:hover{
@@ -427,14 +428,14 @@ border-right: 1px solid #CCC;
   }
 
   #meleeRosterPic{
-    filter:brightness(150%);
+    filter:brightness(90%);
     width: 300px;
   }
   #meleeRosterPic img{
     margin-left: 0px;
   }
   #meleeRosterPic:hover{
-    filter:brightness(170%);
+    filter:brightness(110%);
   }
 
 
@@ -499,7 +500,7 @@ border-right: 1px solid #CCC;
 
 .newsBanner{
   box-shadow: 0 6px 6px rgba(0,0,0,.04);
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .newsPageTitle{
@@ -696,10 +697,16 @@ border-right: 1px solid #CCC;
   box-shadow: 0 20px 20px rgba(0,0,0,0.18);
   cursor: pointer;
 
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+box-sizing: border-box;         /* Opera/IE 8+ */
+
 }
 .homeNewsPic:hover{
   box-shadow: 0 40px 40px rgba(0,0,0,0.26);
   transform: translate(0, -10px);
+  border: 7px solid #2EBBD9;
+
 }
 .homeNewsArticleBox{
   box-shadow: 0 0 8px 8px rgba(0,0,0,0.02);
@@ -757,7 +764,7 @@ border-right: 1px solid #CCC;
 .profileTitle{
   text-align: center;
   height:50px;
-  font-size: 48;
+  font-size: 32;
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   margin-bottom: 10px;

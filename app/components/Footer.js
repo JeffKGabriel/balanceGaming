@@ -92,10 +92,27 @@ const Footer = React.createClass({
               alignItems:'center',
               justifyContent:'center',
             }}>
+
+            <a href="https://www.youtube.com/channel/UCan0P1RBTw5begkZbkBpTjA">
+              <div className="fa fa-youtube-play footerIcon" aria-hidden="true"
+                style={{
+                  margin:6,
+                }}>
+              </div>
+            </a>
+
+            <a href="https://www.twitch.tv/balanceesports">
+              <div className="fa fa-twitch footerIcon" aria-hidden="true"
+                style={{
+                  margin:6,
+                }}>
+              </div>
+            </a>
+
             <a href="https://twitter.com/esportsbalance">
               <div className="fa fa-twitter footerIcon" aria-hidden="true"
                 style={{
-                  margin:12,
+                  margin:6,
                 }}>
               </div>
             </a>
@@ -103,7 +120,7 @@ const Footer = React.createClass({
             <a href="https://www.facebook.com/BalanceGaming/">
               <div className="fa fa-facebook-square footerIcon" aria-hidden="true"
                 style={{
-                  margin:12,
+                  margin:6,
                 }}>
               </div>
             </a>
@@ -113,6 +130,17 @@ const Footer = React.createClass({
           <div className="col-xs-4 col-xs-offset-0 col-md-offset-3 col-md-5 footerRightLinks noPadding">
 
           <div className="hidden-xs hidden-sm">
+
+            <a href="https://www.youtube.com/channel/UCan0P1RBTw5begkZbkBpTjA">
+              <div className="fa fa-youtube-play footerIcon" aria-hidden="true">
+              </div>
+            </a>
+
+            <a href="https://www.twitch.tv/balanceesports">
+              <div className="fa fa-twitch footerIcon" aria-hidden="true">
+              </div>
+            </a>
+
             <a href="https://twitter.com/esportsbalance">
               <div className="fa fa-twitter footerIcon" aria-hidden="true">
               </div>

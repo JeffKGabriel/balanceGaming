@@ -10,6 +10,7 @@ const HomeRosterBox = React.createClass({
     var smashLogo = require('../imgs/smashLogo2.jpg');
     var dotaLogo = require('../imgs/dotaLogo.png');
 
+/*
     var rosterInfoSumail={
       age:17,
       name: "Sumail",
@@ -38,6 +39,8 @@ const HomeRosterBox = React.createClass({
       pic: require('../imgs/isaiRoster.png'),
       id:4 ,
     }
+
+    */
 
 //  <HomeRosterPanel info={rosterInfoArteezy} />
 

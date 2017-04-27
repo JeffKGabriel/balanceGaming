@@ -140,7 +140,7 @@ const Main = React.createClass({
           "resume" : "",
           "bio" : "Entrepreneur with 4 years of experience in e-sports team management, content creator management, artist management, and more. Co-founder of former eSport League OCG Gaming. Former Chief Media Officer for Exertus eSports.",
           "twitch" : "",
-          "pic" : "AboutJordan.jpg",
+          "pic" : "About/AboutJordan.jpg",
           "website" : "",
         },
         {
@@ -151,7 +151,7 @@ const Main = React.createClass({
           "resume" : "",
           "bio" : "Graphics Generalist with a passion for competitive gaming and speedruns. Works in a wide range of areas, from 2D Motion Graphics to 3D Character Design and VFX. Currently pursuing a degree in applied neural networks.",
           "twitch" : "",
-          "pic" : "AboutGoo.jpg",
+          "pic" : "About/AboutGoo.jpg",
           "website" : "https://www.youtube.com/c/goovisuals",
         },
         {
@@ -162,7 +162,7 @@ const Main = React.createClass({
           "resume" : "",
           "bio": "William has been designing for about seven years; starting off as a freelance designer, but making his way into his longtime passion as an eSports designer. He plans to bring all of this experience to Balance in order to provide the best quality design work he can.",
           "twitch" : "",
-          "pic" : "AboutWGJ.png",
+          "pic" : "About/AboutWGJ.jpg",
           "website" : "https://www.behance.net/williamback",
         },
 
@@ -174,7 +174,7 @@ const Main = React.createClass({
           "resume" : "",
           "bio" : "Competitive gaming fan and javascript junkie. Enjoys minimal web design. Currently interested in mobile development and social marketing.",
           "twitch" : "",
-          "pic" : "About/AboutJeff2.png",
+          "pic" : "About/AboutJeff2.jpg",
           "website" : "http://jgab.me/",
         },
 

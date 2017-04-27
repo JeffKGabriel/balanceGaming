@@ -2,7 +2,7 @@ var React = require('react');
 
 //var bgTiled = require('../imgs/BG_tiled.png');
 //var bgTiledSmall = require('../imgs/BG_600.png')
-var bgTiledSmallLight = require('../imgs/BG_600_Lighter.png')
+//var bgTiledSmallLight = require('../imgs/BG_600_Lighter.png')
 var bgTileBright = require('../imgs/bright_tile2.png')
 
 

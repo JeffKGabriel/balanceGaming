@@ -10,6 +10,7 @@ import AllTeams from '../components/Rosters/AllTeams.js'
 import MediaIndex from '../components/media/MediaIndex.js'
 import Partners from '../components/Partners.js'
 import About from '../components/About.js'
+import Streams from '../components/Streams.js'
 import PlayerProfile from '../components/Rosters/PlayerProfile.js'
 import Team from '../components/Rosters/Team.js'
 
@@ -53,6 +54,7 @@ const routes = (
       <Route path='/newsPage' component={NewsPage} />
       <Route path='/login' component={Login} />
       <Route path='/Rosters' component={AllTeams} />
+      <Route path='/Streams' component={Streams} />
       <Route path='/Team' component={Team} />
       <Route path='/Media' component={MediaIndex} />
       <Route path='/Partners' component={Partners} />

@@ -17,6 +17,21 @@ const Main = React.createClass({
       news:[
         {
           "article" : [
+            "In anticipation of a lot of upcoming announcements for the Super Smash Bros scene, we at Balance Gaming are extremely excited to announce our partnership with Mute City Customs!!" ,
+            "Mute City Customs, LLC is a leading creator of customized controllers and consoles for the Smash scene, featuring both high quality paint jobs and world-class controller mods. MCC has painted consoles for major tournaments such as Super Smash Con, Shine 2016, and The Big House 6, alongside a number of controller commissions. MCC's Typo is arguably the top controller modder in the Smash scene, and has worked on controllers for dozens of SSBMRank Top 100 players.",
+            "We at Balance are longtime fans of Tyler/Nfreak and having met with him over the past few months, it was clear that they were looking to take their operations and content creation to the next level. With the addition of Typo to their staff and the newly formed partnership with Balance Gaming both organizations now have the pieces in place to provide the Smash community with a new level of content and services. We are already collaborating on a number of projects that we’re extremely excited to let you guys in on in the very near future and definitely stay tuned on social media because this is only the beginning for what’s to come for us in the Smash community.",
+            "You can find MCC on their twitters @MCC_NFreak and @HRCtypo, on Facebook at facebook.com/mutecitycustoms or Twitter at twitter.com/mutecitycustoms . Also if you’re attending Royal Flush this weekend, definitely check out their booth.",
+            "Also if you haven’t already, check us out @esportsbalance and at https://www.facebook.com/balancegaming",
+          ],
+          "name" : "Mute City" ,
+          "date" : "May 12, 2017" ,
+          "title": "Balance X MCC",
+          "id": 1,
+          "boxPic" : "Thumbnail.jpg",
+          "banner" : "Mute_Banner.jpg",
+        },
+        {
+          "article" : [
             "On this Wednesday we’re extremely proud to announce the culmination of almost a year of blood and sweat in the launch of our new eSports family." ,
             "We are Balance Gaming",
             "",
@@ -25,13 +40,14 @@ const Main = React.createClass({
             "https://www.facebook.com/BalanceGaming/"
           ],
           "name" : "Howdy" ,
-          "date" : "April 26, 2018" ,
+          "date" : "April 26, 2017" ,
           "title": "Intro",
-          "id": 1,
+          "id": 0,
           "boxPic" : "Intro_thumbnail.jpg",
           "banner" : "Intro_widebanner.jpg",
         },
       ],
+
 
 
       rosters:[
@@ -77,7 +93,7 @@ const Main = React.createClass({
         },
         {
           "game": "Overwatch",
-          "pic": "About/AboutNoobicabra.jpg",
+          "pic": "About/aboutNoob2.jpeg",
           "bio": "Avery has been gaming since he was very young.  He is always striving for excellence by finding his niche and taking it to its full potential.  One of his many strengths is understanding the inner-workings of games at both the micro and macro levels making him ideal for the Shotcaller position. He has been captivated by Overwatch since its launch; and along with his team, he aims to go all the way to the top and never look back. As the Shotcaller of the team Avery provides the gameplan and direction that gives his team the ability to truly shine in competition.",
           "country": "USA",
           "name": "Noobicabra",
@@ -120,6 +136,8 @@ const Main = React.createClass({
           "twitch" : "https://www.twitch.tv/trvirtua",
           "pic" : "About/AboutGraham3.jpg",
           "website" : "",
+          "youtube" : "",
+
         },
         {
           "name" : "Dalton Peters",
@@ -129,19 +147,22 @@ const Main = React.createClass({
           "resume" : "",
           "bio" : "Over 7 years of corporate finance & real estate experience working with Investment and Operations firms, responsible for cash flow forecasting; financial, credit and covenant analysis; investor, bank and financial statement reporting. Passionate Super Smash Bros. Wii U and Melee player. Former competitive World of Warcraft PvP and Team Fortress 2 player including heavy involvement in requisite communities.",
           "twitch" : "",
-          "pic" : "About/AboutDalton.png",
+          "pic" : "About/AboutDalton.jpg",
           "website" : "",
+          "youtube" : "",
+
         },
         {
           "name" : "Jordan Richards",
           "title" : "Multimedia Manager",
-          "twitter" : "https://twitter.com/OverwatchGotz",
+          "twitter" : "https://twitter.com/Jackal_OW",
           "linkedIn" : "",
           "resume" : "",
           "bio" : "Entrepreneur with 4 years of experience in e-sports team management, content creator management, artist management, and more. Co-founder of former eSport League OCG Gaming. Former Chief Media Officer for Exertus eSports.",
           "twitch" : "",
           "pic" : "About/AboutJordan.jpg",
           "website" : "",
+          "youtube" : "",
         },
         {
           "name" : "Mikhail “Goo” Ivanushko",
@@ -152,7 +173,9 @@ const Main = React.createClass({
           "bio" : "Graphics Generalist with a passion for competitive gaming and speedruns. Works in a wide range of areas, from 2D Motion Graphics to 3D Character Design and VFX. Currently pursuing a degree in applied neural networks.",
           "twitch" : "",
           "pic" : "About/AboutGoo.jpg",
-          "website" : "https://www.youtube.com/c/goovisuals",
+          "website" : "",
+          "youtube" : "https://www.youtube.com/c/goovisuals",
+
         },
         {
           "name" : "William “WGB” Back",
@@ -164,6 +187,8 @@ const Main = React.createClass({
           "twitch" : "",
           "pic" : "About/AboutWGJ.jpg",
           "website" : "https://www.behance.net/williamback",
+          "youtube" : "",
+
         },
 
         {
@@ -175,7 +200,8 @@ const Main = React.createClass({
           "bio" : "Competitive gaming fan and javascript junkie. Enjoys minimal web design. Currently interested in mobile development and social marketing.",
           "twitch" : "",
           "pic" : "About/AboutJeff2.jpg",
-          "website" : "http://jgab.me/",
+          "website" : "",
+          "youtube" : "",
         },
 
       ]

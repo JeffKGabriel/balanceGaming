@@ -154,7 +154,7 @@ const Home = React.createClass({
             </div>
           </div>
 
-          { newsList.length === 0
+          { newsList.length >= 0
             ? null
             :
 

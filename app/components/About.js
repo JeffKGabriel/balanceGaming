@@ -155,6 +155,14 @@ const AboutSocial = React.createClass({
           null
           }
 
+          {this.props.info.youtube !== "" ?
+          <a href={this.props.info.youtube}>
+          <div className="fa fa-youtube-square aboutTeamSocialIcon" aria-hidden="true"></div>
+          </a>
+          :
+          null
+          }
+
         </div>
       )
 

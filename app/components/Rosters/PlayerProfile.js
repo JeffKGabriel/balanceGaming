@@ -123,7 +123,7 @@ const PlayerProfile = React.createClass({
 
         <RosterBanner banner={newsBanner} />
 
-        <div className="col-sm-offset-2 col-sm-8">
+        <div className=" col-xs-12 col-md-offset-2 col-md-8">
           {player}
         </div>
 
@@ -153,22 +153,46 @@ const RosterBanner = (props)=>(
 
 const Player = (props) =>(
   <div>
-    <PlayerPic pic={props.pic} twitch={props.twitch} twitter={props.twitter} />
-    <PlayerInfo name={props.name} age={props.age} country={props.country} bio={props.bio} fullName={props.fullName}  />
+    <PlayerPic pic={props.pic} />
+    <PlayerInfo pic={props.pic} name={props.name} age={props.age} country={props.country} bio={props.bio} fullName={props.fullName}  />
+    <PlayerSocial twitch={props.twitch} twitter={props.twitter} />
+
   </div>
 )
 
 const PlayerPic = (props) =>{
-  console.log(props.pic);
+
   let reqPic = require('../../imgs/'+props.pic);
 
   return(
-    <div className="col-sm-4 noPadding">
-      <div className="profilePic">
+    <div className="col-xs-12 col-sm-4 noPadding"
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        }}
+      >
+      <div className="profilePic col-xs-12">
         <img className="img-responsive profileImg" src={reqPic} />
       </div>
 
-      <div className="profileSocial">
+
+    </div>
+  )
+}
+
+const PlayerSocial = (props) =>{
+
+  return(
+    <div className="col-xs-12 col-sm-4 noPadding"
+      style={{
+        display: 'flex',
+        flexDirection : 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        }}
+      >
+
+      <div className="profileSocial col-xs-12 noPadding">
 
         <a href={props.twitter}>
           <div className="fa fa-twitter partnerLinkIcon" aria-hidden="true">
@@ -176,7 +200,7 @@ const PlayerPic = (props) =>{
         </a>
 
         <a href={props.twitch}>
-          <div className="fa fa-facebook-square partnerLinkIcon" aria-hidden="true"
+          <div className="fa fa-twitch partnerLinkIcon" aria-hidden="true"
            style={{
              marginLeft:32,
            }}
@@ -186,7 +210,7 @@ const PlayerPic = (props) =>{
 
       </div>
 
-      <div id="twitterEmbed" className="embedTwitterProfile myFade">
+      <div id="twitterEmbed" className="embedTwitterProfile myFade col-xs-12">
         <a className="twitter-timeline" data-width="280" data-height="500" href={props.twitter}></a>
           <script async src="//platform.twitter.com/widgets.js" charset="utf-8">
           </script>
@@ -197,9 +221,10 @@ const PlayerPic = (props) =>{
 
 const PlayerInfo = (props) => {
   return(
-    <div className="col-sm-8 noPadding"
+    <div className=" col-xs-12 col-sm-8 noPadding"
       style={{
         marginTop: 60,
+        float: 'right',
       }}
     >
       <div className="profileTitleBackground col-sm-12">

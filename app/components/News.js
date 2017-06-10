@@ -174,14 +174,14 @@ const NewsArticle = React.createClass({
             marginTop:32,
           }}>
               <div className="shareButton">
-                <FacebookShareButton url="http://104.131.167.44/#/newsPage?id=1" title={this.props.title}>
+                <FacebookShareButton url={"http://balance-gaming.com/#/newsPage?id="+this.props.id} title={this.props.title}>
                   <FacebookIcon size={32} round={true} />
                 </FacebookShareButton>
               </div>
 
 
               <div className="shareButton">
-                <TwitterShareButton url="http://104.131.167.44/#/newsPage?id=1" title={this.props.title}>
+                <TwitterShareButton url={"http://balance-gaming.com/#/newsPage?id="+this.props.id} title={this.props.title}>
                   <TwitterIcon size={32} round={true} />
                 </TwitterShareButton>
               </div>

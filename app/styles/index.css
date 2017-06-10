@@ -705,7 +705,7 @@ box-sizing: border-box;         /* Opera/IE 8+ */
 .homeNewsPic:hover{
   box-shadow: 0 40px 40px rgba(0,0,0,0.26);
   transform: translate(0, -10px);
-  border: 7px solid #2EBBD9;
+  /* border: 7px solid #2EBBD9; */
 
 }
 .homeNewsArticleBox{

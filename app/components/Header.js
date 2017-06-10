@@ -4,22 +4,19 @@ var Link = ReactRouter.Link;
 
 var Header = (props) =>{
 
-    var sliderOffset = 10; //Home
+    var sliderOffset = -8; //Home
     switch(props.activeTab.substring(1)){
-      case "News":
-        sliderOffset = 76;
-        break;
-      case "newsPage":
-        sliderOffset = 76;
-        break;
       case "Rosters":
-        sliderOffset = 147;
+        sliderOffset = 63;
         break;
       case "Team":
-        sliderOffset = 147;
+        sliderOffset = 63;
         break;
       case "PlayerProfile":
-        sliderOffset = 147;
+        sliderOffset = 63;
+        break;
+      case "Streams":
+        sliderOffset = 145;
         break;
       case "Media":
         sliderOffset = 221;
@@ -52,16 +49,16 @@ var Header = (props) =>{
 
               <ul className="MenuUL">
 
-                <Link to={{ pathname:'/Home', state: { scrollToTop: true } }}>
-                  <li>Home</li>
-                </Link>
-
                 <Link to={{ pathname:'/News', state: { scrollToTop: true } }}>
                   <li>News</li>
                 </Link>
 
                 <Link to={{ pathname:'/Rosters', state: { scrollToTop: true } }}>
                   <li>Rosters</li>
+                </Link>
+
+                <Link to={{ pathname:'/Streams', state: { scrollToTop: true } }}>
+                  <li>Streams</li>
                 </Link>
 
                 <Link to={{ pathname:'/Media', state: { scrollToTop: true } }}>
@@ -91,9 +88,6 @@ var Header = (props) =>{
 
               <ul className="MenuULSmall col-xs-12 col-sm-8 col-sm-offset-2 noPadding">
 
-                <Link to={{ pathname:'/Home', state: { scrollToTop: true } }}>
-                  <li>Home</li>
-                </Link>
 
                 <Link to={{ pathname:'/News', state: { scrollToTop: true } }}>
                   <li>News</li>
@@ -101,6 +95,10 @@ var Header = (props) =>{
 
                 <Link to={{ pathname:'/Rosters', state: { scrollToTop: true } }}>
                   <li>Rosters</li>
+                </Link>
+
+                <Link to={{ pathname:'/Streams', state: { scrollToTop: true } }}>
+                  <li>Streams</li>
                 </Link>
 
                 <Link to={{ pathname:'/Media', state: { scrollToTop: true } }}>

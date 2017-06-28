@@ -36,7 +36,7 @@ module.exports = {
   },
   resolve: {
     //extensions: ['', '.js', '.jsx'],
-    root: path.resolve('./app')
+    //root: path.resolve('./app')
   },
   plugins: [HTMLWebpackPluginConfig]
 };

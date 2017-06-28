@@ -15,42 +15,123 @@ import Measure from 'react-measure';
 var axios = require('axios')
 
 
+async function getStreams(){
+
+      var config = {
+        headers: {'Accept': 'application/vnd.twitchtv.v3+json',
+                  'Client-ID': 'gq3eamtaznxxixtj3w151doy60oxl51'
+                 }
+      }
+
+       const response = await axios.get('https://api.twitch.tv/kraken/channels/syroxm', config)
+       const data = response.data;
+       console.log("single channel",data);
+}
+
+async function getLiveStreams(){
+
+      var logos = []
+      var names = []
+      var liveStreamInfos = {
+        logos: logos,
+        names: names
+      }
+
+      var configLive = {
+        headers: {'Accept': 'application/vnd.twitchtv.v5+json',
+                  'Client-ID': 'gq3eamtaznxxixtj3w151doy60oxl51',
+                 }
+      }
+
+      const response = await axios.get('https://api.twitch.tv/kraken/streams/?channel=62044794,41629741,76603065,41002166,21138562,139598398,48912398,69532631,31754159,40923194,8444510,22212857,54719698', configLive)
+
+      console.log("live channels",response.data);
+
+      if(response.data.streams.length > 0){
+
+        for(var i=0;i<response.data.streams.length;i++){
+
+          logos.push(response.data.streams[i].channel.logo)
+          names.push(response.data.streams[i].channel.name)
+
+        }
+      }
+
+      return liveStreamInfos
+
+}
+
+
+
+
+
+
+
 const Streams = React.createClass({
+
+  getInitialState() {
+    return {
+      logos:null,
+      names:null,
+      active:"undefined"
+    };
+  },
+
+
+  componentWillMount: async function(){
+
+          getStreams().then( x=> {
+            //console.log(x);
+          })
+
+          getLiveStreams().then( x=> {
+            //console.log(x);
+            console.log("x.names",x.names);
+            this.setState({
+                           names:x.names,
+                           logos:x.logos,
+                           active:x.names[0]
+                          })
+          })
+
+  },
 
 
   render: function(){
 
-    const streamThumbs = this.props.children.passState.rosters.map( (a,k) => {
+    console.log("render");
+    console.log("state", this.state);
 
-      return(
-        <StreamThumbs info={a} key={k} />
-      )
-
-    });
+    var that = this
 
 
-      var config = {
-        headers: {'Accept': 'application/vnd.twitchtv.v3+json'}
-      }
+    let streamThumbs = null
 
-      let logos = []
-
-      axios.get('https://api.twitch.tv/kraken/channels/summit1g', config)
-        .then(function(response){
-          console.log(response.data); // ex.: { user: 'Your User'}
-          logos.push(response.data.logo)
-          console.log("logos",logos);
+    let changeStream = (name) =>{
+        this.setState({
+            active: name
         });
+    }
 
+    if(this.state.names !== null){
 
+      streamThumbs = Object.keys(this.state.names).map( (a,k) => {
 
-      /*
-      request(options, function (error, response, body) {
-        console.log('error:', error); // Print the error if one occurred
-        console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-        console.log('body:', body); // Print the HTML for the Google homepage.
+        return(
+          <StreamThumbs changeStream={changeStream} name={this.state["names"][k]} logo={this.state["logos"][k]} active={this.state.active} key={k} />
+        )
+
       });
-      */
+
+    }
+
+
+  //  let streamBox = () =>{
+  //    console.log("make streamBox active",this.state.active);
+  //    return(
+  //      <StreamBox active={this.state.active} />
+  //    )
+  //  }
 
 
 
@@ -58,23 +139,25 @@ const Streams = React.createClass({
       <div className="col-sm-12 contentPage">
         <Background />
         <div style={{
-          marginTop:160,
+          marginTop:120,
         }}
         >
         </div>
 
         <div className="col-sm-offset-1 col-sm-10">
 
-
-          {streamThumbs}
-          <StreamBox />
-
-
-          <HomeHeader>-</HomeHeader>
+          <div style={{display: 'flex', flexDirection: 'row', justifyContent:'center', alignItems:'center' , flexWrap:'wrap', marginBottom:"34px" }} >
+            {streamThumbs}
+          </div>
 
 
+          <StreamBox active={this.state.active} />
 
         </div>
+
+
+
+        <StreamInfo teams={this.props.children.passState.rosters.concat(this.props.children.passState.staffBios)} currentStreamer={this.state.active} />
 
 
 
@@ -87,6 +170,114 @@ const Streams = React.createClass({
   },
 });
 
+const Player = (props) =>(
+  <div  style={{
+          marginTop: '30px',
+          display: 'flex',
+          flexDirection: 'row',
+          flexWrap: 'wrap',
+          justifyContent: 'center',
+          alignItems:'center',
+        }}
+    >
+    <PlayerPic pic={props.pic} />
+    <PlayerInfo pic={props.pic} name={props.name} age={props.age} country={props.country} bio={props.bio} fullName={props.fullName}  />
+  </div>
+)
+const PlayerPic = (props) =>{
+
+  let reqPic = require('../imgs/'+props.pic);
+
+  return(
+    <div className="col-xs-12 col-sm-4 noPadding"
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        }}
+      >
+      <div className="profilePic col-xs-12">
+        <img className="img-responsive profileImg" src={reqPic} />
+      </div>
+
+
+    </div>
+  )
+}
+const PlayerInfo = (props) => {
+  return(
+    <div className=" col-xs-12 col-sm-8 noPadding"
+      style={{
+        float: 'right',
+        marginTop: '10px'
+      }}
+    >
+      <div className="profileTitleBackground col-sm-12">
+
+        <div className="col-sm-11">
+
+          <div className="col-sm-12 profileTitle">
+            {props.fullName}
+          </div>
+          <div className="col-sm-12 profileInfo">
+            {props.age} | {props.country}
+          </div>
+        </div>
+
+      </div>
+
+      <div className=" col-sm-offset-1 col-sm-10 profileBio">
+        {props.bio}
+      </div>
+
+    </div>
+  )
+}
+
+
+const StreamInfo = React.createClass({
+
+
+  render: function(){
+
+    console.log(this.props.teams);
+
+    var thisStreamer = this.props.teams.filter( (a,k)=>{
+      return a.twitchName == this.props.currentStreamer
+    })
+
+
+    const player = thisStreamer.map((a,k)=> {
+      return(
+        <Player
+          name={a.name}
+          fullName={a.fullName}
+          country={a.country}
+          bio={a.bio}
+          age={a.age}
+          pic={a.pic}
+          twitter={a.twitter}
+          twitch={a.twitch}
+          key={k}
+        />
+      )
+    })
+
+    return(
+
+      <div className=" col-xs-12 col-md-offset-2 col-md-8">
+
+        {player}
+
+      </div>
+
+    )
+
+
+  }
+
+
+})
+
 
 
 
@@ -94,21 +285,18 @@ const Streams = React.createClass({
 
 const StreamThumbs = React.createClass({
 
+
   render: function(){
 
-
     return(
-      <div className="col-sm-12">
+      <div className="col-sm-2">
 
-        <div style={{display: 'flex', flexDirection: 'row' }} >
-
-          <div>
-            {this.props.info.twitch}
+          <div
+            style={{display: 'flex', flexDirection: 'row', justifyContent:'center', alignItems:'center' }}
+            onClick={()=> this.props.changeStream(this.props.name)}
+            >
+            <img className={this.props.active == this.props.name ? "streamThumbsActive" : "streamThumbs" } src={this.props.logo} height="100" width="100" />
           </div>
-
-        </div>
-
-
 
       </div>
     )
@@ -118,29 +306,50 @@ const StreamThumbs = React.createClass({
 
 
 
-const StreamBox = (props) =>{
+
+const StreamBox = React.createClass({
+
+  render: function(){
+
+    console.log("streamBox active props",this.props.active);
+    let liveSrc = "http://player.twitch.tv/?channel="+this.props.active
 
 
-    return(
-      <Measure>
-        {dimensions =>
+      return(
+        <div>
+          {this.props.active == null
+            ?
+              <div className='aboutBio'
+                style={{
+                  marginTop:'80px',
+                }}
+                >
+                No one is streaming at this time
+              </div>
+            :
 
-          <div className="col-sm-12 noPadding">
+            <Measure>
+              {dimensions =>
 
-            <iframe
-             src="http://player.twitch.tv/?channel=savjz"
-             height={dimensions.width * (9/16)}
-             width={dimensions.width}
-             frameBorder="0"
-             scrolling="no"
-             allowFullScreen="true">
-           </iframe>
+                <div className="col-sm-12 noPadding">
 
-          </div>
-        }
-      </Measure>
-    )
-}
+                  <iframe
+                   src={liveSrc}
+                   height={dimensions.width * (9/16)}
+                   width={dimensions.width}
+                   frameBorder="0"
+                   scrolling="no"
+                   allowFullScreen="true">
+                 </iframe>
+
+                </div>
+              }
+            </Measure>
+          }
+        </div>
+      )
+    }
+});
 
 
 
@@ -151,7 +360,7 @@ const StreamBox = (props) =>{
 // Map Redux state to component props
 function mapStateToProps(state) {
   return {
-    teams: state.rosterReducer
+    teams: state.rosterReducer  //.concat(state.otherReducer)
   }
 }
 

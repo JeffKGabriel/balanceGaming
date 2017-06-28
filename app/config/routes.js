@@ -1,5 +1,9 @@
 import React from 'react'
-import {applyRouterMiddleware, Router, Route, hashHistory, browserHistory, IndexRoute } from 'react-router'
+import {applyRouterMiddleware, Router, Route, IndexRoute, useRouterHistory } from 'react-router'
+
+import { createHashHistory } from 'history'
+const appHistory = useRouterHistory(createHashHistory)()
+
 
 import Main from '../components/Main.js'
 import Home from '../components/Home.js'
@@ -30,7 +34,7 @@ const shouldUpdateScroll = (prevRouterProps, {routes}) => {
 */
 
 const routes = (
-  <Router history={hashHistory}
+  <Router history={appHistory}
   render={applyRouterMiddleware(useScroll(
 
     (prevRouterProps, {location},) => {

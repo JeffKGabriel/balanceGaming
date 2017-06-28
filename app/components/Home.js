@@ -120,6 +120,10 @@ const Home = React.createClass({
     */
 
 
+    var partnerLogoMCC = require('../imgs/mcc.png')
+
+
+
     return(
       <div className="contentPage">
         <Background />
@@ -214,17 +218,23 @@ const Home = React.createClass({
               //backgroundColor: '#880',
             }}
           >
-            <div style={{
-            }}>
-
-              <div className="partnersBox">
 
 
+                <div className="partnersBox">
+
+                  <div className="partnersHomePanel" style={{
+                    height:200,
+                    width:200,
+                    display:'flex',
+                    justifyContent:'center',
+                  }}>
+                    <img src={partnerLogoMCC} className="img-responsive" />
+                  </div>
 
 
-              </div>
+                </div>
 
-            </div>
+
 
           </div>
         </div>

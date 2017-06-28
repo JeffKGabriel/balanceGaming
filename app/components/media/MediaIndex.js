@@ -83,6 +83,16 @@ const MediaIndex = React.createClass({
               <div>
                 <div className="sliderContent">
                   <YouTube
+                    videoId="IbkPKEVrPK0"
+                    opts={vidOpts}
+                    onReady={this._onReady}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="sliderContent">
+                  <YouTube
                     videoId="G9UnwZ2HsXg"
                     opts={vidOpts}
                     onReady={this._onReady}

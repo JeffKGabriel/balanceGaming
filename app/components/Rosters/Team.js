@@ -55,6 +55,7 @@ const Team = React.createClass({
       const players = this.props.players.map((a,k) =>{
 
           let memberInfo = {
+            game : a.game,
             id:a.id,
             age:a.age,
             name:a.name,

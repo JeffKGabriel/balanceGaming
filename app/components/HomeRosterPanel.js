@@ -51,25 +51,31 @@ const HomeRosterPanel = React.createClass({
             </div>
 
           </div>
-          <div className="homeRosterPlayerCountry">
-          <div className="col-xs-6"
-              style={{
-                textAlign:'right',
-                padding: 0,
-                paddingRight:4,
-              }}
-          >
-            Role
-          </div>
-          <div className="col-xs-6"
-              style={{
-                textAlign:'left',
-                padding: 0,
-              }}
-          >
-            : {this.props.info.role}
-          </div>
-          </div>
+
+
+            <div className="homeRosterPlayerCountry">
+
+                  <div className="col-xs-6"
+                      style={{
+                        textAlign:'right',
+                        padding: 0,
+                        paddingRight:4,
+                      }}
+                  >
+                    Role
+                  </div>
+                  <div className="col-xs-6"
+                      style={{
+                        textAlign:'left',
+                        padding: 0,
+                      }}
+                  >
+                    : {this.props.info.role}
+                  </div>
+
+            </div>
+
+
         </div>
 
         <div className="playerSocial">

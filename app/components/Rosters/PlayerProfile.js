@@ -239,21 +239,11 @@ const PlayerInfo = (props) => {
           </div>
         </div>
 
-
-
-
-
-
       </div>
 
       <div className=" col-sm-offset-1 col-sm-10 profileBio">
         {props.bio}
       </div>
-
-
-
-
-
 
     </div>
   )

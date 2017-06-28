@@ -10,8 +10,9 @@ import Footer from './Footer.js'
 
 const Partners = React.createClass({
 
+
+
   /*
-  <PartnerBox />
   <PartnerBox />
   <PartnerBox />
   <PartnerBox />
@@ -32,7 +33,7 @@ const Partners = React.createClass({
 
         <div className="col-md-offset-1 col-md-10 col-xs-12 noPadding">
           <div className="col-xs-12 partnerBox">
-
+            <PartnerBox />
           </div>
         </div>
 
@@ -70,13 +71,17 @@ const PartnerPic = React.createClass({
 
   render: function(){
 
+    var partnerLogo = require('../imgs/mcc.png')
+
+
     return(
       <div className="col-xs-12 partnerPic"
         style={{
-          height:200
+          height:200,
+          padding: "10px",
         }}
       >
-       <img src="https://static1.squarespace.com/static/56e0692bf699bb8546ef30d8/t/57644eb915d5db8754e94a97/1479131022408/?format=750w" height="200" className="img-responsive" />
+       <img src={partnerLogo} height="200" className="img-responsive" />
       </div>
     )
 
@@ -90,7 +95,7 @@ const PartnerBio = React.createClass({
 
     return(
       <div className="col-xs-12 partnerBio">
-       Short ribs pork drumstick t-bone tri-tip ground round, ham capicola tail. Bacon prosciutto jerky, beef filet mignon cupim flank boudin ribeye short ribs landjaeger chuck salami pork chop meatball. Ham kielbasa cow meatball, biltong venison leberkas filet mignon andouille. Ball tip porchetta spare ribs ham hock ribeye shankle boudin sausage tongue prosciutto meatloaf corned beef short ribs. Meatball boudin chuck shank, hamburger ribeye meatloaf flank tenderloin. Salami fatback chicken cupim, capicola hamburger pork chop.
+       Mute City Customs, LLC is a leading creator of customized controllers and consoles for the Smash scene, featuring high quality paint jobs, aesthetic mods, resin cast buttons, and world-class controller mods. MCC has painted consoles for major tournaments such as Shine 2016, and The Big House 6, and Royal Flush, and also provides further aesthetic mods such as custom buttons and the Shinewave LED mod. MCC's controller modding services are among the best in the world, and are performed on-site at most major tournaments.
       </div>
     )
 
@@ -109,21 +114,29 @@ const PartnerLinks = React.createClass({
           fontSize:36,
         }}
       >
+
+        <a href="https://twitter.com/mutecitycustoms">
          <div className="fa fa-twitter partnerLinkIcon" aria-hidden="true">
          </div>
+        </a>
 
-         <div className="fa fa-facebook-square partnerLinkIcon" aria-hidden="true"
-          style={{
-            marginLeft:32,
-          }}
-         >
-         </div>
-         <div className="fa fa-globe partnerLinkIcon" aria-hidden="true"
-           style={{
-             marginLeft:30,
-           }}
-         >
-         </div>
+        <a href="https://www.facebook.com/mutecitycustoms/">
+          <div className="fa fa-facebook-square partnerLinkIcon" aria-hidden="true"
+            style={{
+              marginLeft:32,
+            }}
+           >
+           </div>
+       </a>
+
+         <a href="http://mutecitycustoms.com/">
+           <div className="fa fa-globe partnerLinkIcon" aria-hidden="true"
+             style={{
+               marginLeft:30,
+             }}
+           >
+           </div>
+        </a>
       </div>
     )
 

@@ -2,6 +2,8 @@ var React = require('react');
 
 import Header from './Header.js'
 import Footer from './Footer.js'
+import Favicon from 'react-favicon'
+
 
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 require('../styles/index.css');
@@ -62,6 +64,7 @@ const Main = React.createClass({
           "role": "Flex Support",
           "age": 20,
           "twitch" : "https://www.twitch.tv/viralow",
+          "twitchName" : "viralow",
           "twitter" : "https://twitter.com/Viral_OW",
           "id": 1,
         },
@@ -75,21 +78,9 @@ const Main = React.createClass({
           "role": "Flex DPS",
           "age": 20,
           "twitch" : "https://www.twitch.tv/moonchop",
+          "twitchName" : "moonchop",
           "twitter" : "https://twitter.com/RealMoonChopper",
           "id": 2,
-        },
-        {
-          "game": "Overwatch",
-          "pic": "About/AboutGBunny.jpg",
-          "bio": "At a very young age Chris only had two things in mind which was football and being the best at video games. Football was the center of his life until high school where he decided to focus on eSports. Starting with League of Legends he competed and earned his way to his first LAN event. Chris grew apart from LoL and started playing Overwatch where he found his passion playing the role of Main DPS. With his raw mechanical skill he’s able to out frag the competition and win teamfights.",
-          "country": "USA",
-          "name": "Gbunny",
-          "fullName" : "Christopher \"Gbunny\" Trimarchi",
-          "role": "DPS",
-          "age": 20,
-          "twitch" : "https://www.twitch.tv/gbunny1",
-          "twitter" : "https://twitter.com/Gbunny_OW",
-          "id": 3,
         },
         {
           "game": "Overwatch",
@@ -101,9 +92,26 @@ const Main = React.createClass({
           "role": "Support",
           "age": 20,
           "twitch" : "https://www.twitch.tv/noobicabra",
+          "twitchName" : "noobicabra",
           "twitter" : "https://twitter.com/Noobicabra",
+          "id": 3,
+        },
+
+        {
+          "game": "Overwatch",
+          "pic": "About/AboutGBunny.jpg",
+          "bio": "At a very young age Chris only had two things in mind which was football and being the best at video games. Football was the center of his life until high school where he decided to focus on eSports. Starting with League of Legends he competed and earned his way to his first LAN event. Chris grew apart from LoL and started playing Overwatch where he found his passion playing the role of Main DPS. With his raw mechanical skill he’s able to out frag the competition and win teamfights.",
+          "country": "USA",
+          "name": "Gbunny",
+          "fullName" : "Christopher \"Gbunny\" Trimarchi",
+          "role": "DPS",
+          "age": 20,
+          "twitch" : "https://www.twitch.tv/gbunny1",
+          "twitchName" : "gbunny1",
+          "twitter" : "https://twitter.com/Gbunny_OW",
           "id": 4,
         },
+
         {
           "game": "Overwatch",
           "pic": "About/AboutRay.jpg",
@@ -114,10 +122,55 @@ const Main = React.createClass({
           "role": "Tank",
           "age": 22,
           "twitch" : "https://www.twitch.tv/rayreign",
+          "twitchName" : "rayreign",
           "twitter" : "https://twitter.com/RayReign_OW",
           "id": 5,
         },
 
+        {
+          "game": "Melee",
+          "pic": "About/SyroxWebPic.png",
+          "bio": "Living in Colorado at the start of his teenage years Justin found a love for Super Smash Bros. Melee. He has always strived to always “show up” in anything he puts his mind to, and with a passion to become the best, this is only the start for him! Around 2015 is when Justin started to realize who he was in the game, big advancements were always made and a strive to keep getting better. You can always expect to see exciting plays from him, his play is described as a flow, you can always see his punish and movement go hand in hand fluently.",
+          "country": "USA",
+          "name": "Syrox",
+          "fullName" : "Justin \"Syrox\" Burroughs",
+          "role": "Fox",
+          "age": 18,
+          "twitch" : "https://www.twitch.tv/syroxm",
+          "twitchName" : "syroxm",
+          "twitter" : "https://twitter.com/SyroxM",
+          "id": 6,
+        },
+
+        {
+          "game": "Melee",
+          "pic": "About/DFoxWebPic.png",
+          "bio": "Sami Muhanna aka Druggedfox, a Melee player hailing from Atlanta, GA, is known for his extremely technical punish-based playstyle on both his previous characters, Sheik and Falco. Sami has now brought that style to his fox, with whom he ranked 23rd on the 2016 SSBMRank. With 2017 leaving him looking like a top 10 contender, he is only looking to push his game even further. Druggedfox is a true student of the game and is widely known not only as a great player but also as a top tier analyst.",
+          "country": "USA",
+          "name": "Druggedfox",
+          "fullName" : "Sami \"Druggedfox\" Muhanna",
+          "role": "Fox",
+          "age": 24,
+          "twitch" : "https://www.twitch.tv/druggedfox",
+          "twitchName" : "druggedfox",
+          "twitter" : "https://twitter.com/Druggedfox",
+          "id": 7,
+        },
+
+        {
+          "game": "Melee",
+          "pic": "About/SleepyWebPic.png",
+          "bio": "John ‘Sleepyk’ Lee is a longstanding member of the Super Smash Brothers Melee community (2007). I've spent many of my years helping other people improve and I have written a comprehensive guide for improving at the game. I've placed pretty well at multiple nationals (Top 8 EVO SSBM Doubles 2016) and provide high level commentary.",
+          "country": "USA",
+          "name": "Sleepyk",
+          "fullName" : "John \"Sleepyk\" Lee",
+          "role": "Coach",
+          "age": 27,
+          "twitch" : "https://www.twitch.tv/sleepyk",
+          "twitchName" : "sleepyk",
+          "twitter" : "https://twitter.com/sleepike",
+          "id": 8,
+        },
 
       ],
 
@@ -203,7 +256,117 @@ const Main = React.createClass({
           "website" : "",
           "youtube" : "",
         },
+        {
+          "name" : "CherubiKnight",
+          "title" : "Social Media Management",
+          "twitter" : "https://twitter.com/CherubiKnight",
+          "linkedIn" : "",
+          "resume" : "",
+          "bio": "eSports personality with 2 years of Social Media Management experience and Content Creation for YouTube and Twitch since 2009.  Signed by Aether eSports in 2014 then again by Most Valuable Gaming in 2015. Former Host of Mew2King's stream.",
+          "twitch" : "",
+          "pic" : "About/CherubiWebPic.png",
+          "website" : "",
+          "youtube" : "",
+        },
 
+      ],
+
+      staffBios:[
+        {
+          "pic": "About/TypoWebPic.png",
+          "bio": "Mike “Typo” Bassett has built an unparalleled reputation amongst professional Super Smash Bros Melee players as one of the knowledgeable and accessible controller modders in the scene. Typo’s controllers are used by dozens of the SSBMRank top 100 players and his busy travel schedule and mail order queue has brought his work to hundreds of North American customers since 2016.",
+          "country": "USA",
+          "name": "Mike Bassett",
+          "fullName" : "Mike \"Typo\" Bassett",
+          "age": 24,
+          "twitch" : "www.twitch.tv/hrctypo",
+          "twitchName" : "hrctypo",
+          "twitter": ""
+
+        },
+        {
+          "pic": "About/NFreakWebPic.png",
+          "bio": "Tyler ‘NFreak’ Morrow is the founder and CEO of Mute City Customs. With little artistic background, NFreak kicked off MCC by trying his hand at a single custom Gamecube for Pound 2016. Since then, he has painted consoles for major tournaments such as Super Smash Con, Shine 2016, The Big House 6, and Royal Flush, and can usually be found assisting Typo and Serisium with controller modding services at events. NFreak plays an unconventional Falcon in Melee, and is a strong advocate for hitbox-style Smash controllers.",
+          "country": "USA",
+          "name": "Tyler Morrow",
+          "fullName" : "Tyler \"NFreak\" Morrow",
+          "age": 24,
+          "twitch" : "www.twitch.tv/mcc_nfreak",
+          "twitchName" : "mcc_nfreak",
+          "twitter": ""
+
+        },
+        {
+          "pic": "About/AboutDalton.jpg",
+          "bio": "Over 7 years of corporate finance & real estate experience working with Investment and Operations firms, responsible for cash flow forecasting; financial, credit and covenant analysis; investor, bank and financial statement reporting. Passionate Super Smash Bros. Wii U and Melee player. Former competitive World of Warcraft PvP and Team Fortress 2 player including heavy involvement in requisite communities.",
+          "country": "USA",
+          "name": "Dalton Peters",
+          "fullName" : "Dalton \"DTP\" Peters",
+          "age": 26,
+          "twitch" : "www.twitch.tv/DTP_OW",
+          "twitchName" : "dtp_ow",
+          "twitter": ""
+
+        },
+        {
+          "pic": "About/AboutGraham3.jpg",
+          "bio": "Entrepreneur with over 10 years of experience in the technology, e-commerce, e-sports and gaming industries. Highly motivated to grow within the e-sports market and invest further in its growth as well. Past entrepreneurship ventures include real market trading, tournament hosting, talent management, and content creation.",
+          "country": "USA",
+          "name": "Graham Peters",
+          "fullName" : "Graham \"Virtua\" Peters",
+          "age": 24,
+          "twitch" : "www.twitch.tv/trvirtua",
+          "twitchName" : "trvirtua",
+          "twitter": ""
+
+        },
+        {
+          "pic": "About/CherubiWebPic.png",
+          "bio": "eSports personality with 2 years of Social Media Management experience and Content Creation for YouTube and Twitch since 2009.  Signed by Aether eSports in 2014 then again by Most Valuable Gaming in 2015. Former Host of Mew2King's stream.",
+          "country": "USA",
+          "name": "CherubiKnight",
+          "fullName" : "CherubiKnight",
+          "age": 26,
+          "twitch" : "www.twitch.tv/Cherubiknight",
+          "twitchName" : "cherubiknight",
+          "twitter": ""
+
+        },
+        {
+          "pic": "About/SleepyWebPic.png",
+          "bio": "John ‘Sleepyk’ Lee is a longstanding member of the Super Smash Brothers Melee community (2007). I've spent many of my years helping other people improve and I have written a comprehensive guide for improving at the game. I've placed pretty well at multiple nationals (Top 8 EVO SSBM Doubles 2016) and provide high level commentary.",
+          "country": "USA",
+          "name": "Sleepyk",
+          "fullName" : "John \"Sleepyk\" Lee",
+          "age": 27,
+          "twitch" : "www.twitch.tv/sleepyk",
+          "twitchName" : "sleepyk",
+          "twitter": ""
+
+        },
+        {
+          "pic": "About/DFoxWebPic.png",
+          "bio": "Sami Muhanna aka Druggedfox, a Melee player hailing from Atlanta, GA, is known for his extremely technical punish-based playstyle on both his previous characters, Sheik and Falco. Sami has now brought that style to his fox, with whom he ranked 23rd on the 2016 SSBMRank. With 2017 leaving him looking like a top 10 contender, he is only looking to push his game even further. Druggedfox is a true student of the game and is widely known not only as a great player but also as a top tier analyst.",
+          "country": "USA",
+          "name": "Druggedfox",
+          "fullName" : "Sami \"Druggedfox\" Muhanna",
+          "age": 24,
+          "twitch" : "www.twitch.tv/druggedfox",
+          "twitchName" : "druggedfox",
+          "twitter": ""
+
+        },
+        {
+          "pic": "About/SyroxWebPic.png",
+          "bio": "Living in Colorado at the start of his teenage years Justin found a love for Super Smash Bros. Melee. He has always strived to always “show up” in anything he puts his mind to, and with a passion to become the best, this is only the start for him! Around 2015 is when Justin started to realize who he was in the game, big advancements were always made and a strive to keep getting better. You can always expect to see exciting plays from him, his play is described as a flow, you can always see his punish and movement go hand in hand fluently.",
+          "country": "USA",
+          "name": "Syrox",
+          "fullName" : "Justin \"Syroxm\" ",
+          "age": 18,
+          "twitch" : "www.twitch.tv/syroxm",
+          "twitchName" : "syroxm",
+          "twitter": ""
+        }
       ]
     }
   },
@@ -212,9 +375,12 @@ const Main = React.createClass({
 
   render: function(){
 
+
+
     return(
       <div>
         <Header activeTab={this.props.location.pathname} />
+        <Favicon url={require('../imgs/favicons/favicon-96x96.png')}/>
 
           <ReactCSSTransitionGroup
             transitionName = "myAppear"

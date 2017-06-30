@@ -107,7 +107,7 @@ body{
 .MenuULSmall{
   padding-left: 10px; padding-right: 10px;
   list-style-type: none;
-  height: 100%;
+  margin-top: 4px;
   display:flex;
   align-items: center;
   justify-content: space-around;
@@ -120,12 +120,42 @@ body{
   color: #75B5FC;
 }
 
+.MenuULSmallActive{
+  padding-left: 10px; padding-right: 10px;
+  padding-top: 40px;
+  list-style-type: none;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 36px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color:#555;
+}
+.menuULSmall a:hover{
+  color: #75B5FC;
+}
+.MenuULSmallActive a{
+  margin-top: 12px;
+}
+
 
 
 .headerMenu{
-  max-width:450px;
+  max-width:500px;
   float:right;
 }
+
+.headerMenuSmall{
+
+}
+.headerMenuSmallActive{
+  height:100vh;
+  background-color: white;
+}
+
+
 
 .headerSlider{
   background: rgb(29, 137, 255);

@@ -7,7 +7,9 @@ const Header = React.createClass({
 //var Header = (props) =>{
 
 getInitialState() {
-    return { mobileClass : "headerMenuSmall" };
+    return {
+      mobileClass : "headerMenuSmall"
+    };
   },
 
 render: function(){
@@ -27,28 +29,32 @@ render: function(){
   }
 
 
-    var sliderOffset = -8; //Home
+
+    var sliderOffset = 31; //Home
     switch(this.props.activeTab.substring(1)){
+      case "News":
+        sliderOffset = 31;
+        break;
       case "Rosters":
-        sliderOffset = 63;
+        sliderOffset = 102;
         break;
       case "Team":
-        sliderOffset = 63;
+        sliderOffset = 102;
         break;
       case "PlayerProfile":
-        sliderOffset = 63;
+        sliderOffset = 102;
         break;
       case "Streams":
-        sliderOffset = 145;
+        sliderOffset = 184;
         break;
       case "Media":
-        sliderOffset = 221;
+        sliderOffset = 261;
         break;
       case "Partners":
-        sliderOffset = 297;
+        sliderOffset = 338;
         break;
       case "About":
-        sliderOffset = 376;
+        sliderOffset = 414;
         break;
     }
 
@@ -167,13 +173,14 @@ render: function(){
                 }
 
 
+                  <div className="headerSlider hidden-xs hidden-sm"
+                    style={{
+                      transform: 'translateX('+sliderOffset+'px)',
+                    }}
+                  >
+                  </div>
+                
 
-              <div className="headerSlider hidden-xs hidden-sm"
-                style={{
-                  transform: 'translateX('+sliderOffset+'px)',
-                }}
-              >
-              </div>
 
             </div>
 

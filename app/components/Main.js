@@ -332,41 +332,6 @@ const Main = React.createClass({
           "twitter": ""
 
         },
-        {
-          "pic": "About/SleepyWebPic.png",
-          "bio": "John ‘Sleepyk’ Lee is a longstanding member of the Super Smash Brothers Melee community (2007). I've spent many of my years helping other people improve and I have written a comprehensive guide for improving at the game. I've placed pretty well at multiple nationals (Top 8 EVO SSBM Doubles 2016) and provide high level commentary.",
-          "country": "USA",
-          "name": "Sleepyk",
-          "fullName" : "John \"Sleepyk\" Lee",
-          "age": 27,
-          "twitch" : "www.twitch.tv/sleepyk",
-          "twitchName" : "sleepyk",
-          "twitter": ""
-
-        },
-        {
-          "pic": "About/DFoxWebPic.png",
-          "bio": "Sami Muhanna aka Druggedfox, a Melee player hailing from Atlanta, GA, is known for his extremely technical punish-based playstyle on both his previous characters, Sheik and Falco. Sami has now brought that style to his fox, with whom he ranked 23rd on the 2016 SSBMRank. With 2017 leaving him looking like a top 10 contender, he is only looking to push his game even further. Druggedfox is a true student of the game and is widely known not only as a great player but also as a top tier analyst.",
-          "country": "USA",
-          "name": "Druggedfox",
-          "fullName" : "Sami \"Druggedfox\" Muhanna",
-          "age": 24,
-          "twitch" : "www.twitch.tv/druggedfox",
-          "twitchName" : "druggedfox",
-          "twitter": ""
-
-        },
-        {
-          "pic": "About/SyroxWebPic.png",
-          "bio": "Living in Colorado at the start of his teenage years Justin found a love for Super Smash Bros. Melee. He has always strived to always “show up” in anything he puts his mind to, and with a passion to become the best, this is only the start for him! Around 2015 is when Justin started to realize who he was in the game, big advancements were always made and a strive to keep getting better. You can always expect to see exciting plays from him, his play is described as a flow, you can always see his punish and movement go hand in hand fluently.",
-          "country": "USA",
-          "name": "Syrox",
-          "fullName" : "Justin \"Syroxm\" ",
-          "age": 18,
-          "twitch" : "www.twitch.tv/syroxm",
-          "twitchName" : "syroxm",
-          "twitter": ""
-        }
       ]
     }
   },

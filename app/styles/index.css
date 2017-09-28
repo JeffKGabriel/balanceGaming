@@ -107,7 +107,7 @@ body{
 .MenuULSmall{
   padding-left: 10px; padding-right: 10px;
   list-style-type: none;
-  margin-top: 4px;
+  height: 100%;
   display:flex;
   align-items: center;
   justify-content: space-around;
@@ -120,42 +120,12 @@ body{
   color: #75B5FC;
 }
 
-.MenuULSmallActive{
-  padding-left: 10px; padding-right: 10px;
-  padding-top: 40px;
-  list-style-type: none;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  font-size: 36px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
-  color:#555;
-}
-.menuULSmall a:hover{
-  color: #75B5FC;
-}
-.MenuULSmallActive a{
-  margin-top: 12px;
-}
-
 
 
 .headerMenu{
-  max-width:500px;
+  max-width:450px;
   float:right;
 }
-
-.headerMenuSmall{
-
-}
-.headerMenuSmallActive{
-  height:100vh;
-  background-color: white;
-}
-
-
 
 .headerSlider{
   background: rgb(29, 137, 255);
@@ -653,7 +623,7 @@ border-right: 1px solid #CCC;
   color: #555;
   border-radius: 5px;
   overflow: hidden;
-  height:280;
+  height:270;
 
 }
 
@@ -752,7 +722,7 @@ box-sizing: border-box;         /* Opera/IE 8+ */
 
   padding-right:0;
   padding-left:0;
-  height:350;
+  height:340;
   margin-top:50;
   display: flex;
   flex-direction: column;

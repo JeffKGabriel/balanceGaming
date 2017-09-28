@@ -23,7 +23,7 @@ async function getStreams(){
                  }
       }
 
-       const response = await axios.get('https://api.twitch.tv/kraken/channels/syroxm', config)
+       const response = await axios.get('https://api.twitch.tv/kraken/channels/rayreign', config)
        const data = response.data;
        console.log("single channel",data);
 }
@@ -43,7 +43,7 @@ async function getLiveStreams(){
                  }
       }
 
-      const response = await axios.get('https://api.twitch.tv/kraken/streams/?channel=62044794,41629741,76603065,41002166,21138562,139598398,48912398,69532631,31754159,40923194,8444510,22212857,54719698', configLive)
+      const response = await axios.get('https://api.twitch.tv/kraken/streams/?channel=62044794,41629741,76603065,41002166,48912398,69532631,31754159,40923194,8444510,22212857,54719698', configLive)
 
       console.log("live channels",response.data);
 
@@ -80,9 +80,12 @@ const Streams = React.createClass({
 
   componentWillMount: async function(){
 
+    /*
           getStreams().then( x=> {
-            //console.log(x);
+            console.log(x);
           })
+     */
+
 
           getLiveStreams().then( x=> {
             //console.log(x);

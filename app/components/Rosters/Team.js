@@ -76,7 +76,7 @@ const Team = React.createClass({
             marginBottom:80,
           }}
         >
-          <HomeHeader logo="overwatchLogo.png" >{this.props.gameName}</HomeHeader>
+          <HomeHeader logo={this.props.gameName+"Logo.png"}>{this.props.gameName}</HomeHeader>
           <div className="col-sm-12 rosterPanelBox">
             {players}
           </div>

@@ -23,7 +23,7 @@ var rosterSoonLight= require('../../imgs/RosterGames/Games_Soon_Light.jpg');
 
 var OWLight = require('../../imgs/RosterGames/OW_light.png');
 var SmashSoon = require('../../imgs/RosterGames/Smash_soon.jpg');
-var SmashLight = require('../../imgs/RosterGames/Smash_light.png');
+var SmashLight = require('../../imgs/RosterGames/smash_melee_light.jpg');
 
 
 var ComingSoon = require('../../imgs/RosterGames/Coming_soon.jpg');

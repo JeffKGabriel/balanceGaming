@@ -6,8 +6,8 @@ const HomeRosterBox = React.createClass({
 
   render: function (){
 
-    var overwatchLogo = require('../imgs/overwatchLogo.png');
-    var smashLogo = require('../imgs/smashLogo2.jpg');
+    var overwatchLogo = require('../imgs/OverwatchLogo.png');
+    var smashLogo = require('../imgs/MeleeLogo.png');
     var dotaLogo = require('../imgs/dotaLogo.png');
 
 /*

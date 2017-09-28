@@ -23,7 +23,7 @@ const faviconPlugin = new HtmlWebpackPlugin({
   })
 
 module.exports = {
-  entry: PATHS.app,
+  entry: ['babel-polyfill' , PATHS.app],
   output: {
     path: PATHS.build,
     filename: "index_bundle.js"

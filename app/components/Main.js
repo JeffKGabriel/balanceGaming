@@ -83,21 +83,6 @@ const Main = React.createClass({
           "id": 1,
         },
         {
-          "game": "Overwatch",
-          "pic": "About/moon2Chopped.png",
-          "bio": "Starting at a young age, Ryou excelled at any game he could get his hands on and carried that into his adult life. Launching the start of his eSports career by competing in Counter-Strike: Global Offensive. Creating his own local team and competing at even higher levels within the Washington DC area. With the release of Overwatch Ryou made the climb up the ranks to Top 500 and made the choice to leave CS:GO behind and play Overwatch full time. With the rest of his team behind him, Ryou plays the critical role of Flex DPS. Team wiping with a Genji Blade or getting crucial picks as Roadhog.",
-          "country": "USA",
-          "name": "MoonChopper",
-          "fullName" : "Ryou \"MoonChopper\" Nishiyama",
-          "role": "Flex DPS",
-          "age": 20,
-          "twitch" : "https://www.twitch.tv/moonchop",
-          "twitchName" : "moonchop",
-          "twitter" : "https://twitter.com/RealMoonChopper",
-          "id": 2,
-        },
-
-        {
           "game": "Melee",
           "pic": "About/SyroxWebPic.png",
           "bio": "Living in Colorado at the start of his teenage years Justin found a love for Super Smash Bros. Melee. He has always strived to always “show up” in anything he puts his mind to, and with a passion to become the best, this is only the start for him! Around 2015 is when Justin started to realize who he was in the game, big advancements were always made and a strive to keep getting better. You can always expect to see exciting plays from him, his play is described as a flow, you can always see his punish and movement go hand in hand fluently.",

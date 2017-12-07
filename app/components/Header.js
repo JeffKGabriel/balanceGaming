@@ -4,19 +4,22 @@ var Link = ReactRouter.Link;
 
 var Header = (props) =>{
 
-    var sliderOffset = -8; //Home
+    var sliderOffset = -69; //Home
     switch(props.activeTab.substring(1)){
       case "Rosters":
-        sliderOffset = 63;
+        sliderOffset = 1;
         break;
       case "Team":
-        sliderOffset = 63;
+        sliderOffset = 1;
         break;
       case "PlayerProfile":
-        sliderOffset = 63;
+        sliderOffset = 1;
+        break;
+      case "Store":
+        sliderOffset = 72;
         break;
       case "Streams":
-        sliderOffset = 145;
+        sliderOffset = 144;
         break;
       case "Media":
         sliderOffset = 221;
@@ -57,6 +60,10 @@ var Header = (props) =>{
                   <li>Rosters</li>
                 </Link>
 
+                <Link to={{ pathname:'/Store', state: { scrollToTop: true } }}>
+                  <li>Store</li>
+                </Link>
+
                 <Link to={{ pathname:'/Streams', state: { scrollToTop: true } }}>
                   <li>Streams</li>
                 </Link>
@@ -95,6 +102,10 @@ var Header = (props) =>{
 
                 <Link to={{ pathname:'/Rosters', state: { scrollToTop: true } }}>
                   <li>Rosters</li>
+                </Link>
+
+                <Link to={{ pathname:'/Store', state: { scrollToTop: true } }}>
+                  <li>Store</li>
                 </Link>
 
                 <Link to={{ pathname:'/Streams', state: { scrollToTop: true } }}>

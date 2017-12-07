@@ -14,6 +14,7 @@ import AllTeams from '../components/Rosters/AllTeams.js'
 import MediaIndex from '../components/media/MediaIndex.js'
 import Partners from '../components/Partners.js'
 import About from '../components/About.js'
+import Store from '../components/Store.js'
 import Streams from '../components/Streams.js'
 import PlayerProfile from '../components/Rosters/PlayerProfile.js'
 import Team from '../components/Rosters/Team.js'
@@ -63,6 +64,7 @@ const routes = (
       <Route path='/Media' component={MediaIndex} />
       <Route path='/Partners' component={Partners} />
       <Route path='/About' component={About} />
+      <Route path='/Store' component={Store} />
       <Route path='/PlayerProfile' component={PlayerProfile} />
 
       <IndexRoute component={Home} />

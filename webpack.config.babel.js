@@ -23,6 +23,7 @@ const faviconPlugin = new HtmlWebpackPlugin({
   })
 
 module.exports = {
+  devtool: 'source-map',
   entry: ['babel-polyfill' , PATHS.app],
   output: {
     path: PATHS.build,
@@ -41,5 +42,10 @@ module.exports = {
   },
   plugins: [
     HTMLWebpackPluginConfig,
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
+    })
   ]
 };

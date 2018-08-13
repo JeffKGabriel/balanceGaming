@@ -24,9 +24,15 @@ var rosterSoonLight= require('../../imgs/RosterGames/Games_Soon_Light.jpg');
 var OWLight = require('../../imgs/RosterGames/OW_light.png');
 var SmashSoon = require('../../imgs/RosterGames/Smash_soon.jpg');
 var SmashLight = require('../../imgs/RosterGames/smash_melee_light.jpg');
+var Smash4Light = require('../../imgs/RosterGames/sm4sh_light.jpg');
+var StreamersLight = require('../../imgs/RosterGames/Streamers_light.jpg');
+var StreamersDark = require('../../imgs/RosterGames/Streamers_dark.jpg');
+
 
 
 var ComingSoon = require('../../imgs/RosterGames/Coming_soon.jpg');
+var ComingSoonDark = require('../../imgs/RosterGames/Coming_soonDARK.jpg');
+
 
 
 
@@ -61,14 +67,18 @@ const AllTeams = React.createClass({
               flexWrap:"wrap",
             }}>
 
-              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.7}}><img src={ComingSoon} /> </li>
+              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.7}}><img src={ComingSoonDark} /> </li>
 
-              <li className="rosterGalleryPic hidden-xs" style={{opacity:0.7}}><img src={ComingSoon} /></li>
+              <li id="rosterGamePic" className="rosterGalleryPic">
+                  <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Smash 4" } }} >
+                    <img src={Smash4Light} />
+                  </Link>
+              </li>
 
 
               <li id="rosterGamePic" className="rosterGalleryPic">
-                  <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Overwatch" } }} >
-                    <img src={OWLight} />
+                  <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Streamers" } }} >
+                    <img src={StreamersDark} />
                   </Link>
               </li>
 
@@ -79,7 +89,7 @@ const AllTeams = React.createClass({
 
               </li>
 
-              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.7}}><img src={ComingSoon} /> </li>
+              <li className="rosterGalleryPic hidden-xs hidden-sm hidden-md" style={{opacity:0.7}}><img src={ComingSoonDark} /> </li>
 
             </ul>
           </div>
@@ -94,17 +104,25 @@ const AllTeams = React.createClass({
             marginTop:120,
           }}>
 
-          <div style={{ marginTop:20 }}>
-            <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Overwatch" } }} >
-              <img src={OWLight} />
-            </Link>
-          </div>
+          <li id="rosterGamePic" className="rosterGalleryPic">
+              <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Smash 4" } }} >
+                <img src={Smash4Light} />
+              </Link>
+          </li>
 
-          <div style={{ marginTop:20 }}>
+
+          <li id="rosterGamePic" className="rosterGalleryPic">
+              <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Streamers" } }} >
+                <img src={StreamersDark} />
+              </Link>
+          </li>
+
+          <li id="rosterGamePic" className="rosterGalleryPic" style={{}}>
             <Link to={{ pathname: '/Team'  , state: { scrollToTop: true } , query:{id:"Melee" } }} >
               <img src={SmashLight} />
             </Link>
-          </div>
+
+          </li>
 
         </div>
 

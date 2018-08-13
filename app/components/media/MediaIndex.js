@@ -17,6 +17,28 @@ import HomeHeader from '../HomeHeader.js'
 //import Gallery from './Gallery'
 import Gallery from 'react-photo-gallery';
 
+import img1 from '../../imgs/BMR2/Resized_watermark_1.jpg'
+import img2 from '../../imgs/BMR2/Resized_watermark_2.jpg'
+import img3 from '../../imgs/BMR2/Resized_watermark_3.jpg'
+import img4 from '../../imgs/BMR2/Resized_watermark_4.jpg'
+import img5 from '../../imgs/BMR2/Resized_watermark_5.jpg'
+import img6 from '../../imgs/BMR2/Resized_watermark_7.jpg'
+import img7 from '../../imgs/BMR2/Resized_watermark_8.jpg'
+import img8 from '../../imgs/BMR2/Resized_watermark_10.jpg'
+import img9 from '../../imgs/BMR2/Resized_watermark_11.jpg'
+import img10 from '../../imgs/BMR2/Resized_watermark_12.jpg'
+import img11 from '../../imgs/BMR2/Resized_watermark_13.jpg'
+import img12 from '../../imgs/BMR2/Resized_watermark_15.jpg'
+import img13 from '../../imgs/BMR2/Resized_watermark_16.jpg'
+import img14 from '../../imgs/BMR2/Resized_watermark_17.jpg'
+import img15 from '../../imgs/BMR2/Resized_watermark_18.jpg'
+import img16 from '../../imgs/BMR2/Resized_watermark_19.jpg'
+import img17 from '../../imgs/BMR2/Resized_watermark_21.jpg'
+import img18 from '../../imgs/BMR2/Resized_watermark_22.jpg'
+import img19 from '../../imgs/BMR2/Resized_watermark_23.jpg'
+import img20 from '../../imgs/BMR2/Resized_watermark_24.jpg'
+import img21 from '../../imgs/BMR2/Resized_watermark_25.jpg'
+
 
 const MediaIndex = React.createClass({
 
@@ -55,28 +77,31 @@ const MediaIndex = React.createClass({
       }
     }
 
+
+
+
     var bmr2 =[]
-    bmr2[0] = require('../../imgs/BMR2/Resized_watermark_1.jpg')
-    bmr2[1] = require('../../imgs/BMR2/Resized_watermark_2.jpg')
-    bmr2[2] = require('../../imgs/BMR2/Resized_watermark_3.jpg')
-    bmr2[3] = require('../../imgs/BMR2/Resized_watermark_4.jpg')
-    bmr2[4] = require('../../imgs/BMR2/Resized_watermark_5.jpg')
-    bmr2[5] = require('../../imgs/BMR2/Resized_watermark_7.jpg')
-    bmr2[6] = require('../../imgs/BMR2/Resized_watermark_8.jpg')
-    bmr2[7] = require('../../imgs/BMR2/Resized_watermark_10.jpg')
-    bmr2[8] = require('../../imgs/BMR2/Resized_watermark_11.jpg')
-    bmr2[9] = require('../../imgs/BMR2/Resized_watermark_12.jpg')
-    bmr2[10] = require('../../imgs/BMR2/Resized_watermark_13.jpg')
-    bmr2[11] = require('../../imgs/BMR2/Resized_watermark_15.jpg')
-    bmr2[12] = require('../../imgs/BMR2/Resized_watermark_16.jpg')
-    bmr2[13] = require('../../imgs/BMR2/Resized_watermark_17.jpg')
-    bmr2[14] = require('../../imgs/BMR2/Resized_watermark_18.jpg')
-    bmr2[15] = require('../../imgs/BMR2/Resized_watermark_19.jpg')
-    bmr2[17] = require('../../imgs/BMR2/Resized_watermark_21.jpg')
-    bmr2[18] = require('../../imgs/BMR2/Resized_watermark_22.jpg')
-    bmr2[19] = require('../../imgs/BMR2/Resized_watermark_23.jpg')
-    bmr2[20] = require('../../imgs/BMR2/Resized_watermark_24.jpg')
-    bmr2[21] = require('../../imgs/BMR2/Resized_watermark_25.jpg')
+    bmr2[0] = img1
+    bmr2[1] = img2
+    bmr2[2] = img3
+    bmr2[3] = img4
+    bmr2[4] = img5
+    bmr2[5] = img6
+    bmr2[6] = img7
+    bmr2[7] = img8
+    bmr2[8] = img9
+    bmr2[9] = img10
+    bmr2[10] = img11
+    bmr2[11] = img12
+    bmr2[12] = img13
+    bmr2[13] = img14
+    bmr2[14] = img15
+    bmr2[15] = img16
+    bmr2[17] = img17
+    bmr2[18] = img18
+    bmr2[19] = img19
+    bmr2[20] = img20
+    bmr2[21] = img21
 
 
 

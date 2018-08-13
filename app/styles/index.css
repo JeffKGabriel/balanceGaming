@@ -29,6 +29,13 @@ body{
 
 }
 
+.comingSoon{
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size: 32px;
+  text-align: center;
+}
+
 .footerLeftLinks{
   height:90;
   display: flex;
@@ -429,6 +436,7 @@ border-right: 1px solid #CCC;
 
   #rosterGamePic{
     filter:brightness(90%);
+    margin-bottom: 10px;
   }
   #rosterGamePic:hover{
     filter:brightness(110%);

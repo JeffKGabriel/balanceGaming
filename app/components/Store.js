@@ -50,6 +50,8 @@ const Store = React.createClass({
   },
 });
 
+/*   <div id='collection-component-74bf8d6ff7b'></div> */
+
 
 // Map Redux state to component props
 function mapStateToProps(state) {
